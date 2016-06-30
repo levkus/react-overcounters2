@@ -1,10 +1,23 @@
 @import '../../style/vars';
 
 .welcome {
-  padding-top: 2rem;
-  width: 100%;
   color: $card-header-text;
-  text-align: center;
+  width: calc(100% - 550px);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 1.5rem;
   font-family: 'futura_no2_d_demi_boldregular', sans-serif;
-  font-size: 2rem;
+
+  @media (max-width: 550px) {
+    padding-top: 0;
+    width: 100%;
+  }
+
+  @media (min-width: 551px) and (max-width: 1019px) {
+    width: 100%;
+    padding: 2rem 0;
+  }
 }
