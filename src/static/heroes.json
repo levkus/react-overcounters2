@@ -5,8 +5,8 @@
     "name": "Genji",
     "icon": "http://starpact.ru/overcounters/images/icon-genji.png",
     "hex": "http://starpact.ru/overcounters/images/hex-genji.png",
-    "strongAgainst": ["bastion", "widowmaker", "mercy", "hanzo"],
-    "weakAgainst": ["mei", "winston", "zarya", "pharah"],
+    "strongAgainst": ["bastion", "mercy", "widowmaker", "hanzo"],
+    "weakAgainst": ["mei", "winston", "zarya", "roadhog"],
     "role": "offense",
     "selected": false
   },
@@ -17,7 +17,7 @@
     "icon": "http://starpact.ru/overcounters/images/icon-reaper.png",
     "hex": "http://starpact.ru/overcounters/images/hex-reaper.png",
     "strongAgainst": ["mercy", "winston", "zenyatta", "roadhog"],
-    "weakAgainst": ["mccree", "pharah", "tracer", "genji"],
+    "weakAgainst": ["mccree", "pharah", "mei", "genji"],
     "role": "offense",
     "selected": false
   },
@@ -28,7 +28,7 @@
     "icon": "http://starpact.ru/overcounters/images/icon-mccree.png",
     "hex": "http://starpact.ru/overcounters/images/hex-mccree.png",
     "strongAgainst": ["reaper", "tracer", "mercy", "lucio"],
-    "weakAgainst": ["widowmaker", "bastion", "genji", "pharah"],
+    "weakAgainst": ["widowmaker", "pharah", "bastion", "genji"],
     "role": "offense",
     "selected": false
   },
@@ -49,8 +49,8 @@
     "name": "Tracer",
     "icon": "http://starpact.ru/overcounters/images/icon-tracer.png",
     "hex": "http://starpact.ru/overcounters/images/hex-tracer.png",
-    "strongAgainst": ["mercy", "zenyatta", "hanzo", "bastion"],
-    "weakAgainst": ["mccree", "roadhog", "winston", "mei"],
+    "strongAgainst": ["mercy", "zenyatta", "hanzo", "widowmaker"],
+    "weakAgainst": ["mccree", "roadhog", "winston", "pharah"],
     "role": "offense",
     "selected": false
   },
@@ -60,8 +60,8 @@
     "name": "Pharah",
     "icon": "http://starpact.ru/overcounters/images/icon-pharah.png",
     "hex": "http://starpact.ru/overcounters/images/hex-pharah.png",
-    "strongAgainst": ["junkrat", "mei", "reaper", "symmetra"],
-    "weakAgainst": ["soldier76", "widowmaker", "roadhog", "mccree"],
+    "strongAgainst": ["junkrat", "mei", "reaper", "mercy"],
+    "weakAgainst": ["soldier76", "widowmaker", "roadhog", "hanzo"],
     "role": "offense",
     "selected": false
   },
@@ -82,7 +82,7 @@
     "name": "Junkrat",
     "icon": "http://starpact.ru/overcounters/images/icon-junkrat.png",
     "hex": "http://starpact.ru/overcounters/images/hex-junkrat.png",
-    "strongAgainst": ["bastion", "symmetra", "torbjorn", "mercy"],
+    "strongAgainst": ["bastion", "torbjorn", "mercy", "symmetra"],
     "weakAgainst": ["pharah", "widowmaker", "soldier76", "mccree"],
     "role": "defense",
     "selected": false
@@ -93,7 +93,7 @@
     "name": "Mei",
     "icon": "http://starpact.ru/overcounters/images/icon-mei.png",
     "hex": "http://starpact.ru/overcounters/images/hex-mei.png",
-    "strongAgainst": ["genji", "dva", "lucio", "mercy"],
+    "strongAgainst": ["genji", "lucio", "dva", "reihardt"],
     "weakAgainst": ["pharah", "widowmaker", "mccree", "junkrat"],
     "role": "defense",
     "selected": false
@@ -115,8 +115,8 @@
     "name": "Torbjörn",
     "icon": "http://starpact.ru/overcounters/images/icon-torbjorn.png",
     "hex": "http://starpact.ru/overcounters/images/hex-torbjorn.png",
-    "strongAgainst": ["mercy", "lucio", "symmetra", "tracer"],
-    "weakAgainst": ["widowmaker", "junkrat", "hanzo", "mccree"],
+    "strongAgainst": ["mercy", "lucio", "symmetra", "zenyatta"],
+    "weakAgainst": ["widowmaker", "junkrat", "hanzo", "pharah"],
     "role": "defense",
     "selected": false
   },
@@ -126,8 +126,8 @@
     "name": "Hanzo",
     "icon": "http://starpact.ru/overcounters/images/icon-hanzo.png",
     "hex": "http://starpact.ru/overcounters/images/hex-hanzo.png",
-    "strongAgainst": ["bastion", "mercy", "zenyatta", "symmetra"],
-    "weakAgainst": ["genji", "tracer", "widowmaker", "mccree"],
+    "strongAgainst": ["bastion", "mercy", "zenyatta", "torbjorn"],
+    "weakAgainst": ["genji", "tracer", "winston", "widowmaker"],
     "role": "defense",
     "selected": false
   },
@@ -138,7 +138,7 @@
     "icon": "http://starpact.ru/overcounters/images/icon-dva.png",
     "hex": "http://starpact.ru/overcounters/images/hex-dva.png",
     "strongAgainst": ["widowmaker", "mercy", "torbjorn", "hanzo"],
-    "weakAgainst": ["mei", "junkrat", "mccree", "reaper"],
+    "weakAgainst": ["mei", "junkrat", "reaper", "mccree"],
     "role": "tank",
     "selected": false
   },
@@ -148,8 +148,8 @@
     "name": "Zarya",
     "icon": "http://starpact.ru/overcounters/images/icon-zarya.png",
     "hex": "http://starpact.ru/overcounters/images/hex-zarya.png",
-    "strongAgainst": ["genji", "mercy", "torbjorn", "winston"],
-    "weakAgainst": ["pharah", "mei", "bastion", "reinhardt"],
+    "strongAgainst": ["mercy", "genji", "torbjorn", "lucio"],
+    "weakAgainst": ["pharah", "reaper", "bastion", "mei"],
     "role": "tank",
     "selected": false
   },
@@ -160,7 +160,7 @@
     "icon": "http://starpact.ru/overcounters/images/icon-reinhardt.png",
     "hex": "http://starpact.ru/overcounters/images/hex-reinhardt.png",
     "strongAgainst": ["mercy", "soldier76", "torbjorn", "lucio"],
-    "weakAgainst": ["mei", "bastion", "pharah", "tracer"],
+    "weakAgainst": ["mei", "bastion", "pharah", "junkrat"],
     "role": "tank",
     "selected": false
   },
@@ -170,8 +170,8 @@
     "name": "Roadhog",
     "icon": "http://starpact.ru/overcounters/images/icon-roadhog.png",
     "hex": "http://starpact.ru/overcounters/images/hex-roadhog.png",
-    "strongAgainst": ["mercy", "symmetra", "tracer", "lucio"],
-    "weakAgainst": ["reaper", "mei", "mccree", "dva"],
+    "strongAgainst": ["mercy", "symmetra", "winston", "lucio"],
+    "weakAgainst": ["reaper", "mei", "dva", "zarya"],
     "role": "tank",
     "selected": false
   },
@@ -182,7 +182,7 @@
     "icon": "http://starpact.ru/overcounters/images/icon-winston.png",
     "hex": "http://starpact.ru/overcounters/images/hex-winston.png",
     "strongAgainst": ["genji", "widowmaker", "mercy", "symmetra"],
-    "weakAgainst": ["bastion", "reaper", "mccree", "roadhog"],
+    "weakAgainst": ["bastion", "reaper", "roadhog", "mccree"],
     "role": "tank",
     "selected": false
   },
@@ -192,8 +192,8 @@
     "name": "Mercy",
     "icon": "http://starpact.ru/overcounters/images/icon-mercy.png",
     "hex": "http://starpact.ru/overcounters/images/hex-mercy.png",
-    "strongAgainst": ["symmetra", "zarya", "torbjorn", "junkrat"],
-    "weakAgainst": ["tracer", "genji", "roadhog", "soldier76"],
+    "strongAgainst": ["symmetra", "lucio", "torbjorn", "junkrat"],
+    "weakAgainst": ["tracer", "roadhog", "genji", "reaper"],
     "role": "support",
     "selected": false
   },
@@ -204,7 +204,7 @@
     "icon": "http://starpact.ru/overcounters/images/icon-zenyatta.png",
     "hex": "http://starpact.ru/overcounters/images/hex-zenyatta.png",
     "strongAgainst": ["mercy", "symmetra", "lucio", "dva"],
-    "weakAgainst": ["widowmaker", "tracer", "genji", "reaper"],
+    "weakAgainst": ["widowmaker", "tracer", "reaper", "genji"],
     "role": "support",
     "selected": false
   },
@@ -215,7 +215,7 @@
     "icon": "http://starpact.ru/overcounters/images/icon-lucio.png",
     "hex": "http://starpact.ru/overcounters/images/hex-lucio.png",
     "strongAgainst": ["mercy", "symmetra", "zenyatta", "torbjorn"],
-    "weakAgainst": ["mei", "mccree", "pharah", "reaper"],
+    "weakAgainst": ["mei", "mccree", "pharah", "soldier76"],
     "role": "support",
     "selected": false
   },
@@ -226,7 +226,7 @@
     "icon": "http://starpact.ru/overcounters/images/icon-symmetra.png",
     "hex": "http://starpact.ru/overcounters/images/hex-symmetra.png",
     "strongAgainst": ["mercy", "genji", "lucio", "reinhardt"],
-    "weakAgainst": ["pharah", "junkrat", "roadhog", "mccree"],
+    "weakAgainst": ["pharah", "roadhog", "junkrat", "mccree"],
     "role": "support",
     "selected": false
   }
