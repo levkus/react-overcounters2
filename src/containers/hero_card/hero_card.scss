@@ -1,11 +1,11 @@
 @import '../../style/vars';
 
 .heroDetail {
-  padding-top: 2rem;
   width: calc(100% - 550px);
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: center;
   box-sizing: border-box;
 
   @media (max-width: 550px) {
@@ -21,6 +21,7 @@
 
 .card {
   margin: 0 auto;
+  padding-bottom: .5rem;
   width: 470px;
   border: 2px solid $card-border-color;
   border-radius: 1rem;
@@ -44,9 +45,10 @@
 }
 
 .strong, .weak {
-  width: 155px;
+  box-sizing: border-box;
+  width: 38%;
 
   @media (max-width: 550px) {
-    width: 38%;
+    width: 37%;
   }
 }
