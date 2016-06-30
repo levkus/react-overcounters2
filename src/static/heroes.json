@@ -1,0 +1,233 @@
+[
+  {
+    "id": "00",
+    "alias": "genji",
+    "name": "Genji",
+    "icon": "http://starpact.ru/overcounters/images/icon-genji.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-genji.png",
+    "strongAgainst": ["bastion", "widowmaker", "mercy", "hanzo"],
+    "weakAgainst": ["mei", "winston", "zarya", "pharah"],
+    "role": "offense",
+    "selected": false
+  },
+  {
+    "id": "01",
+    "alias": "reaper",
+    "name": "Reaper",
+    "icon": "http://starpact.ru/overcounters/images/icon-reaper.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-reaper.png",
+    "strongAgainst": ["mercy", "winston", "zenyatta", "roadhog"],
+    "weakAgainst": ["mccree", "pharah", "tracer", "genji"],
+    "role": "offense",
+    "selected": false
+  },
+  {
+    "id": "02",
+    "alias": "mccree",
+    "name": "McCree",
+    "icon": "http://starpact.ru/overcounters/images/icon-mccree.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-mccree.png",
+    "strongAgainst": ["reaper", "tracer", "mercy", "lucio"],
+    "weakAgainst": ["widowmaker", "bastion", "genji", "pharah"],
+    "role": "offense",
+    "selected": false
+  },
+  {
+    "id": "03",
+    "alias": "soldier76",
+    "name": "Soldier: 76",
+    "icon": "http://starpact.ru/overcounters/images/icon-soldier76.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-soldier76.png",
+    "strongAgainst": ["mercy", "pharah", "zenyatta", "symmetra"],
+    "weakAgainst": ["genji", "reinhardt", "roadhog", "mccree"],
+    "role": "offense",
+    "selected": false
+  },
+  {
+    "id": "04",
+    "alias": "tracer",
+    "name": "Tracer",
+    "icon": "http://starpact.ru/overcounters/images/icon-tracer.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-tracer.png",
+    "strongAgainst": ["mercy", "zenyatta", "hanzo", "bastion"],
+    "weakAgainst": ["mccree", "roadhog", "winston", "mei"],
+    "role": "offense",
+    "selected": false
+  },
+  {
+    "id": "05",
+    "alias": "pharah",
+    "name": "Pharah",
+    "icon": "http://starpact.ru/overcounters/images/icon-pharah.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-pharah.png",
+    "strongAgainst": ["junkrat", "mei", "reaper", "symmetra"],
+    "weakAgainst": ["soldier76", "widowmaker", "roadhog", "mccree"],
+    "role": "offense",
+    "selected": false
+  },
+  {
+    "id": "06",
+    "alias": "bastion",
+    "name": "Bastion",
+    "icon": "http://starpact.ru/overcounters/images/icon-bastion.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-bastion.png",
+    "strongAgainst": ["winston", "mercy", "reinhardt", "lucio"],
+    "weakAgainst": ["genji", "widowmaker", "hanzo", "junkrat"],
+    "role": "defense",
+    "selected": false
+  },
+  {
+    "id": "07",
+    "alias": "junkrat",
+    "name": "Junkrat",
+    "icon": "http://starpact.ru/overcounters/images/icon-junkrat.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-junkrat.png",
+    "strongAgainst": ["bastion", "symmetra", "torbjorn", "mercy"],
+    "weakAgainst": ["pharah", "widowmaker", "soldier76", "mccree"],
+    "role": "defense",
+    "selected": false
+  },
+  {
+    "id": "08",
+    "alias": "mei",
+    "name": "Mei",
+    "icon": "http://starpact.ru/overcounters/images/icon-mei.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-mei.png",
+    "strongAgainst": ["genji", "dva", "lucio", "mercy"],
+    "weakAgainst": ["pharah", "widowmaker", "mccree", "junkrat"],
+    "role": "defense",
+    "selected": false
+  },
+  {
+    "id": "09",
+    "alias": "widowmaker",
+    "name": "Widowmaker",
+    "icon": "http://starpact.ru/overcounters/images/icon-widowmaker.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-widowmaker.png",
+    "strongAgainst": ["bastion", "zenyatta", "torbjorn", "mercy"],
+    "weakAgainst": ["genji", "dva", "winston", "tracer"],
+    "role": "defense",
+    "selected": false
+  },
+  {
+    "id": "10",
+    "alias": "torbjorn",
+    "name": "Torbjörn",
+    "icon": "http://starpact.ru/overcounters/images/icon-torbjorn.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-torbjorn.png",
+    "strongAgainst": ["mercy", "lucio", "symmetra", "tracer"],
+    "weakAgainst": ["widowmaker", "junkrat", "hanzo", "mccree"],
+    "role": "defense",
+    "selected": false
+  },
+  {
+    "id": "11",
+    "alias": "hanzo",
+    "name": "Hanzo",
+    "icon": "http://starpact.ru/overcounters/images/icon-hanzo.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-hanzo.png",
+    "strongAgainst": ["bastion", "mercy", "zenyatta", "symmetra"],
+    "weakAgainst": ["genji", "tracer", "widowmaker", "mccree"],
+    "role": "defense",
+    "selected": false
+  },
+  {
+    "id": "12",
+    "alias": "dva",
+    "name": "D.Va",
+    "icon": "http://starpact.ru/overcounters/images/icon-dva.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-dva.png",
+    "strongAgainst": ["widowmaker", "mercy", "torbjorn", "hanzo"],
+    "weakAgainst": ["mei", "junkrat", "mccree", "reaper"],
+    "role": "tank",
+    "selected": false
+  },
+  {
+    "id": "13",
+    "alias": "zarya",
+    "name": "Zarya",
+    "icon": "http://starpact.ru/overcounters/images/icon-zarya.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-zarya.png",
+    "strongAgainst": ["genji", "mercy", "torbjorn", "winston"],
+    "weakAgainst": ["pharah", "mei", "bastion", "reinhardt"],
+    "role": "tank",
+    "selected": false
+  },
+  {
+    "id": "14",
+    "alias": "reinhardt",
+    "name": "Reinhardt",
+    "icon": "http://starpact.ru/overcounters/images/icon-reinhardt.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-reinhardt.png",
+    "strongAgainst": ["mercy", "soldier76", "torbjorn", "lucio"],
+    "weakAgainst": ["mei", "bastion", "pharah", "tracer"],
+    "role": "tank",
+    "selected": false
+  },
+  {
+    "id": "15",
+    "alias": "roadhog",
+    "name": "Roadhog",
+    "icon": "http://starpact.ru/overcounters/images/icon-roadhog.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-roadhog.png",
+    "strongAgainst": ["mercy", "symmetra", "tracer", "lucio"],
+    "weakAgainst": ["reaper", "mei", "mccree", "dva"],
+    "role": "tank",
+    "selected": false
+  },
+  {
+    "id": "16",
+    "alias": "winston",
+    "name": "Winston",
+    "icon": "http://starpact.ru/overcounters/images/icon-winston.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-winston.png",
+    "strongAgainst": ["genji", "widowmaker", "mercy", "symmetra"],
+    "weakAgainst": ["bastion", "reaper", "mccree", "roadhog"],
+    "role": "tank",
+    "selected": false
+  },
+  {
+    "id": "17",
+    "alias": "mercy",
+    "name": "Mercy",
+    "icon": "http://starpact.ru/overcounters/images/icon-mercy.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-mercy.png",
+    "strongAgainst": ["symmetra", "zarya", "torbjorn", "junkrat"],
+    "weakAgainst": ["tracer", "genji", "roadhog", "soldier76"],
+    "role": "support",
+    "selected": false
+  },
+  {
+    "id": "18",
+    "alias": "zenyatta",
+    "name": "Zenyatta",
+    "icon": "http://starpact.ru/overcounters/images/icon-zenyatta.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-zenyatta.png",
+    "strongAgainst": ["mercy", "symmetra", "lucio", "dva"],
+    "weakAgainst": ["widowmaker", "tracer", "genji", "reaper"],
+    "role": "support",
+    "selected": false
+  },
+  {
+    "id": "19",
+    "alias": "lucio",
+    "name": "Lucio",
+    "icon": "http://starpact.ru/overcounters/images/icon-lucio.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-lucio.png",
+    "strongAgainst": ["mercy", "symmetra", "zenyatta", "torbjorn"],
+    "weakAgainst": ["mei", "mccree", "pharah", "reaper"],
+    "role": "support",
+    "selected": false
+  },
+  {
+    "id": "20",
+    "alias": "symmetra",
+    "name": "Symmetra",
+    "icon": "http://starpact.ru/overcounters/images/icon-symmetra.png",
+    "hex": "http://starpact.ru/overcounters/images/hex-symmetra.png",
+    "strongAgainst": ["mercy", "genji", "lucio", "reinhardt"],
+    "weakAgainst": ["pharah", "junkrat", "roadhog", "mccree"],
+    "role": "support",
+    "selected": false
+  }
+]

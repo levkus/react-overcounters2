@@ -1,0 +1,29 @@
+.list {
+  display: flex;
+  flex-flow: row wrap;
+
+  i {
+    display: inline-block;
+  }
+}
+
+.header {
+  display: inline-block;
+  margin-top: 0;
+  width: calc(100% - 28px);
+  border-bottom: 1px solid rgba(221, 221, 232, .3);
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.25rem;
+  font-family: 'futura_no2_d_demi_boldregular', sans-serif;
+  font-weight: 300;
+}
+
+:global(.icon) {
+  fill: rgba(221, 221, 232, .6);
+  width: 22px;
+  height: 24px;
+  margin-right: 6px;
+  position: relative;
+  top: 7px;
+}

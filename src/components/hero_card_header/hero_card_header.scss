@@ -1,0 +1,25 @@
+@import '../../style/vars';
+
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.image {
+  width: 50%;
+}
+
+
+
+.magic {
+  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.column {
+  height: 60px;
+}

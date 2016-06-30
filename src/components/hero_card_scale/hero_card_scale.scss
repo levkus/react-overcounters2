@@ -1,0 +1,49 @@
+@import '../../style/vars';
+
+.scale {
+  padding-top: .7rem;
+  // width: 105px;
+
+  @media (max-width: 550px) {
+    width: 24%;
+    padding-top: 1.6rem;
+  }
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+
+  @media (max-width: 550px) {
+    margin: 0 auto 2.2rem;
+  }
+}
+
+.stripe {
+  margin-right: 4px;
+  width: 20px;
+  height: 33px;
+  border: 1px solid $hero-card-stripe;
+  transform: skew(24.88rad);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: 550px) {
+    width: 12px;
+    height: 18px;
+  }
+}
+
+.filled {
+  background-color: $hero-card-stripe;
+  composes: stripe;
+}
+
+.empty {
+  background-color: transparent;
+  composes: stripe;
+}

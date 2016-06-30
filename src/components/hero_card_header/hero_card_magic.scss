@@ -1,0 +1,148 @@
+@import '../../style/vars';
+
+.magic {
+  position: relative;
+  top: -20px;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0 -20px;
+  width: 100%;
+  color: $card-header-text;
+  text-transform: uppercase;
+  font-family: 'bignoodletooobliqueitalic', Impact, sans-serif;
+}
+
+.name {
+  position: relative;
+  top: -14px;
+  font-size: 2.1rem;
+  white-space: nowrap;
+
+  @media (max-width: 550px) {
+    font-size: 1.5rem;
+  }
+}
+
+.column {
+  height: 60px;
+}
+
+.row {
+  height: 30px;
+}
+
+.leftCol {
+  width: 140px;
+  composes: column;
+
+}
+
+.centerCol {
+  flex-grow: 1;
+  composes: column;
+
+}
+
+.rightCol {
+  width: 140px;
+  composes: column;
+
+}
+
+.strong, .weak, .topBlank, .sideBottom, .centerBottom {
+  composes: row;
+}
+
+.centerBottom {
+  display: flex;
+}
+
+/* Bottom Center */
+
+.diag {
+  width: 27px;
+  height: 100%;
+}
+
+.diagLeft {
+  background-image: url('static/img/split-diag-left.png');
+  composes: diag;
+}
+
+.diagRight {
+  background-image: url('static/img/split-diag-right.png');
+  composes: diag;
+}
+
+.bottomName {
+  flex-grow: 1;
+  height: 100%;
+  background-image: url('static/img/split-center.png');
+  text-align: center;
+}
+
+/* Top Sides */
+
+.counter {
+  position: relative;
+  top: 6px;
+  font-size: 20px;
+  font-family: 'bignoodletooregular', Impact, sans-serif;
+
+  @media (max-width: 350px) {
+    top: -20px;
+  }
+
+}
+
+.strong {
+  margin-left: 25px;
+  text-align: left;
+  composes: counter;
+
+  @media (max-width: 550px) {
+    margin-left: 4px;
+  }
+}
+
+.weak {
+  margin-right: 25px;
+  text-align: right;
+  composes: counter;
+
+  @media (max-width: 550px) {
+    margin-right: 4px;
+  }
+}
+
+/* Bottom Sides */
+
+.sideBottom {
+  display: flex;
+  height: 30px;
+  background-image: url('static/img/split-side.png');
+  background-repeat: repeat-x;
+}
+
+.far {
+  width: 21px;
+  height: 30px;
+
+  @media (max-width: 550px) {
+    width: 0;
+  }
+}
+
+.farLeft {
+  background-image: url('static/img/split-left.png');
+  composes: far;
+}
+
+.farRight {
+  background-image: url('static/img/split-right.png');
+  composes: far;
+}
+
+.bottomBlank {
+  flex-grow: 1;
+}
