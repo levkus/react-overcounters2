@@ -93,7 +93,7 @@
     "name": "Mei",
     "icon": "http://starpact.ru/overcounters/images/icon-mei.png",
     "hex": "http://starpact.ru/overcounters/images/hex-mei.png",
-    "strongAgainst": ["genji", "lucio", "dva", "reihardt"],
+    "strongAgainst": ["genji", "lucio", "dva", "reinhardt"],
     "weakAgainst": ["pharah", "widowmaker", "mccree", "junkrat"],
     "role": "defense",
     "selected": false
