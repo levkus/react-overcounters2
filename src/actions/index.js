@@ -23,7 +23,6 @@ export function selectHero (alias) {
 export function fetchBattlenet (tag) {
   const url = `https://api.lootbox.eu/pc/eu/${tag}/quick-play/heroes`
   const request = axios.get(url)
-  console.log(request)
   return {
     type: FETCH_BATTLENET,
     payload: request
