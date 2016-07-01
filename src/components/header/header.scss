@@ -1,0 +1,33 @@
+@import '../../style/vars';
+
+.wrapper {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  width: 100%;
+  height: $header-height;
+  background: $header-bg;
+  color: $card-text;
+}
+
+.logo {
+  height: $header-height;
+  font-size: $header-height/2;
+  font-family: 'bignoodletooregular', Impact, sans-serif;
+  line-height: $header-height;
+
+  &:after {
+    content: '.info';
+    color: $list-selected-border;
+    font-size: .8em;
+  }
+}
+
+.battle {
+  height: $header-height;
+  line-height: $header-height;
+}

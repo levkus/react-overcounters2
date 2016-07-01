@@ -5,7 +5,7 @@ import _ from 'lodash'
 import { selectHero } from '../../actions/index'
 import HeroCardHeader from '../../components/hero_card_header/hero_card_header'
 import HeroCardScale from '../../components/hero_card_scale/hero_card_scale'
-import HeroCounterItem from '../../components/hero_counter_item/hero_counter_item'
+import HeroCounterItem from '../../containers/hero_counter_item/hero_counter_item'
 import styles from './hero_card.scss'
 
 class HeroCard extends Component {

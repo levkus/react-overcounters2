@@ -2,13 +2,13 @@
 
 .avatar {
   position: relative;
+  overflow: hidden;
   margin-right: 1.65%;
   margin-bottom: 1rem;
   width: 15%;
   border-radius: .5rem;
-  transform: skew(24.88rad);
-  overflow: hidden;
   cursor: pointer;
+  transform: skew(24.88rad);
 
   &:before {
     position: relative;
@@ -19,14 +19,14 @@
 }
 
 .normal {
-  composes: avatar;
-  background-color: $list-normal-bg;
   border-top: 3px solid $list-color;
   border-bottom: 3px solid $list-color;
+  background-color: $list-normal-bg;
+  composes: avatar;
 
   &:hover {
-    background: $list-selected-bg;
     border: none;
+    background: $list-selected-bg;
     box-shadow: 0 0 1px 2px $list-selected-border,
                 inset 20px 20px 50px 0 $list-selected-border;
     transform: skew(24.88rad) scale(1.10);
@@ -34,16 +34,16 @@
 }
 
 .selected {
-  composes: avatar;
   z-index: 10;
-  background: $list-selected-bg;
   border: none;
+  background: $list-selected-bg;
   box-shadow: 0 0 0 2px $list-selected-border,
               0 0 2px 2px $list-selected-glow,
               inset 0 0 1px 1px $list-selected-inner-glow,
               inset 20px 20px 50px 0 $list-selected-border,
               0 0 20px 0px $list-selected-outer-accent;
   transform: skew(24.88rad) scale(1.20);
+  composes: avatar;
 
   &:hover {
     box-shadow: 0 0 0 2px $list-selected-border,
@@ -57,9 +57,9 @@
 
 .image {
   position: absolute;
-  display: block;
-  height: 100%;
   top: 0;
   left: -12%;
+  display: block;
+  height: 100%;
   transform: skew(-24.88rad) scale(1);
 }

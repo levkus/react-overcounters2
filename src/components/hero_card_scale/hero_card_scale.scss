@@ -1,13 +1,13 @@
 @import '../../style/vars';
 
 .scale {
+  box-sizing: border-box;
   padding-top: .7rem;
   width: 26%;
-  box-sizing: border-box;
 
   @media (max-width: 550px) {
-    width: 24%;
     padding-top: 1.6rem;
+    width: 24%;
   }
 }
 
@@ -29,13 +29,13 @@
   border: 1px solid $hero-card-stripe;
   transform: skew(24.88rad);
 
-  &:last-child {
-    margin-right: 0;
-  }
-
   @media (max-width: 550px) {
     width: 12px;
     height: 18px;
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 }
 

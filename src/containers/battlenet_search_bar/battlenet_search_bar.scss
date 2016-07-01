@@ -1,0 +1,22 @@
+@import '../../style/vars';
+
+.searchbar {
+  height: $header-height/2;
+  line-height: $header-height/2;
+  border: none;
+  background: #212121;
+  border-radius: 3px;
+  color: $card-text;
+  padding: 0 .5rem;
+  width: 150px;
+  text-align: center;
+
+  @media (max-width: 400px) {
+    width: 100px;
+  }
+
+  &:focus {
+    outline: 0;
+    background: $card-header-text;
+  }
+}

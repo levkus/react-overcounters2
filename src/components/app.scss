@@ -1,10 +1,10 @@
 .overwatch {
-  background-image: url('static/img/bg.jpg');
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
   display: flex;
   flex-flow: row;
+  background-image: url('static/img/bg.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 
   @media (max-width: 1019px) {
     flex-flow: column;

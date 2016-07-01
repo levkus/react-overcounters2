@@ -5,10 +5,14 @@
   margin-bottom: .5rem;
   width: 100%;
   color: $card-text;
+  text-decoration: none;
   font-size: 1.375rem;
   font-family: 'bignoodletooobliqueitalic', Impact, sans-serif;
   cursor: pointer;
-  text-decoration: none;
+
+  @media (max-width: 550px) {
+    font-size: 1rem;
+  }
 
   & > .name {
     margin-left: .3rem;
@@ -18,10 +22,6 @@
   }
   &:hover > .name {
     color: $card-text-hover;
-  }
-
-  @media (max-width: 550px) {
-    font-size: 1rem;
   }
 }
 
@@ -60,6 +60,12 @@
     padding-top: 110%;
     content: '';
   }
+}
+
+.topHero {
+  composes: avatar;
+  border-top: 3px solid $list-selected-bg;
+  border-bottom: 3px solid $list-selected-bg;
 }
 
 .image {
