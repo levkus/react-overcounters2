@@ -6,9 +6,7 @@ import styles from './hero_counter_item.scss'
 
 class HeroCounterItem extends Component {
   render () {
-    const side = this.props.side
-    const hero = this.props.hero
-    const topHeroes = this.props.topHeroes
+    const { side, hero, topHeroes } = this.props
     let left
     let right
     let wrapperClass = styles.wrapper

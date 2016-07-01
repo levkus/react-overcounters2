@@ -64,8 +64,7 @@
 
 .topHero {
   composes: avatar;
-  border-top: 3px solid $list-selected-bg;
-  border-bottom: 3px solid $list-selected-bg;
+  background: $list-selected-border;
 }
 
 .image {
