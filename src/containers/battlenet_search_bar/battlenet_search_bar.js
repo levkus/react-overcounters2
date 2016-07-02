@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import cookie from 'react-cookie'
 import { fetchBattlenet } from '../../actions/index'
 import styles from './battlenet_search_bar.scss'
 
@@ -8,15 +7,13 @@ class BattlenetSearchBar extends Component {
   constructor (props) {
     super(props)
 
-    this.state = {
-      term: cookie.load('tag')
-    }
+    this.state = { term: '' }
   }
 
   componentWillMount () {
-    if (this.state.term) {
-      const modifiedTerm = this.state.term.replace('#', '-')
-      this.props.fetchBattlenet(modifiedTerm)
+    if (localStorage.tag) {
+      this.setState({ term: localStorage.tag })
+      this.props.fetchBattlenet(localStorage.tag)
     }
   }
 
@@ -26,22 +23,18 @@ class BattlenetSearchBar extends Component {
 
   onFormSubmit (e) {
     e.preventDefault()
-    const modifiedTerm = this.state.term.replace('#', '-')
-    this.props.fetchBattlenet(modifiedTerm)
-    cookie.save('tag', this.state.term)
+    this.props.fetchBattlenet(this.state.term)
+    localStorage.setItem('tag', this.state.term)
   }
 
   render () {
     return (
       <form onSubmit={e => this.onFormSubmit(e)}>
-        <input
+        <input type='text' placeholder='Battle Tag' spellCheck='false'
           className={styles.searchbar}
-          type='text'
-          placeholder='Battle Tag'
           value={this.state.term}
           onChange={e => this.onInputChange(e.target.value)}
-          spellCheck='false'
-          />
+        />
       </form>
     )
   }
