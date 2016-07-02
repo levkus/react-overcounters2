@@ -3,11 +3,11 @@
 .scale {
   box-sizing: border-box;
   padding-top: .7rem;
-  width: 26%;
+  width: 24%;
 
   @media (max-width: 550px) {
     padding-top: 1.6rem;
-    width: 24%;
+    width: 26%;
   }
 }
 
