@@ -5,6 +5,8 @@ import heroes from 'static/heroes.json'
 export const FETCH_HEROES = 'FETCH_HEROES'
 export const SELECT_HERO = 'SELECT_HERO'
 export const FETCH_BATTLENET = 'FETCH_BATTLENET'
+export const FETCHING_ON = 'FETCHING_ON'
+export const FETCHING_OFF = 'FETCHING_OFF'
 
 export function fetchHeroes () {
   return {
@@ -28,4 +30,12 @@ export function fetchBattlenet (tag) {
     type: FETCH_BATTLENET,
     payload: request
   }
+}
+
+export function fetchingOn (text) {
+  return { type: FETCHING_ON, text }
+}
+
+export function fetchingOff (text) {
+  return { type: FETCHING_OFF, text }
 }

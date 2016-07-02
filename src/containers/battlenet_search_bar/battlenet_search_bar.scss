@@ -5,6 +5,7 @@
   line-height: $header-height/2;
   border: none;
   background: #212121;
+
   border-radius: 3px;
   color: $card-text;
   padding: 0 .5rem;
@@ -17,6 +18,36 @@
 
   &:focus {
     outline: 0;
-    background: $card-header-text;
+    background: $loader-bg;
+  }
+}
+
+.fetching {
+  composes: searchbar;
+  background-image: repeating-linear-gradient(-45deg,
+              $loader-bg 0px,
+              $loader-bg 10px,
+              lighten($loader-bg, 5%) 10px,
+              lighten($loader-bg, 5%) 20px);
+  background-size: 28px $header-height/2;
+  animation: loading 10s infinite linear forwards;
+
+  &:focus {
+    background-image: repeating-linear-gradient(-45deg,
+                $loader-bg 0px,
+                $loader-bg 10px,
+                lighten($loader-bg, 5%) 10px,
+                lighten($loader-bg, 5%) 20px);
+    background-size: 28px $header-height/2;
+    animation: loading 10s infinite linear forwards;
+  }
+}
+
+@keyframes loading {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: -100% 0;
   }
 }

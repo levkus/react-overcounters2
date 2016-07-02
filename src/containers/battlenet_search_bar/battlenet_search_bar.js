@@ -1,22 +1,31 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { fetchBattlenet } from '../../actions/index'
+import { fetchBattlenet, fetchingOn, fetchingOff } from '../../actions/index'
 import styles from './battlenet_search_bar.scss'
 
 class BattlenetSearchBar extends Component {
   constructor (props) {
     super(props)
 
-    this.state = { term: '' }
+    this.state = {
+      term: '',
+      loading: false
+    }
 
     this.onInputChange = this.onInputChange.bind(this)
     this.onFormSubmit = this.onFormSubmit.bind(this)
+    this.selectText = this.selectText.bind(this)
   }
 
   componentWillMount () {
     if (localStorage.tag) {
-      this.setState({ term: localStorage.tag })
+      this.props.fetchingOn('fetching on mount')
+      this.setState({ term: localStorage.tag, loading: true })
       this.props.fetchBattlenet(localStorage.tag)
+        .then(() => {
+          this.props.fetchingOff('fetching off mount')
+          this.setState({ loading: false })
+        })
     }
   }
 
@@ -26,17 +35,35 @@ class BattlenetSearchBar extends Component {
 
   onFormSubmit (e) {
     e.preventDefault()
+    this.props.fetchingOn('fetching on submit')
+    this.setState({ loading: true })
     this.props.fetchBattlenet(this.state.term)
+      .then(() => {
+        this.props.fetchingOff('fetching off submit')
+        this.setState({ loading: false })
+      })
     localStorage.setItem('tag', this.state.term)
+    this.refs.input.blur()
+  }
+
+  selectText (e) {
+    e.target.select()
   }
 
   render () {
+    let style = styles.searchbar
+    if (this.state.loading) {
+      style = styles.fetching
+    }
+
     return (
       <form onSubmit={this.onFormSubmit}>
         <input type='text' placeholder='Battle Tag' spellCheck='false'
-          className={styles.searchbar}
+          ref='input'
+          className={style}
           value={this.state.term}
           onChange={this.onInputChange}
+          onFocus={this.selectText}
         />
       </form>
     )
@@ -44,13 +71,17 @@ class BattlenetSearchBar extends Component {
 }
 
 BattlenetSearchBar.propTypes = {
-  fetchBattlenet: PropTypes.func
+  fetchBattlenet: PropTypes.func,
+  fetchingOn: PropTypes.func,
+  fetchingOff: PropTypes.func,
+  fetching: PropTypes.bool
 }
 
 const mapStateToProps = state => {
   return {
-    topHeroes: state.battlenet.topHeroes
+    topHeroes: state.battlenet.topHeroes,
+    fetching: state.battlenet.fetching
   }
 }
 
-export default connect(mapStateToProps, { fetchBattlenet })(BattlenetSearchBar)
+export default connect(mapStateToProps, { fetchBattlenet, fetchingOn, fetchingOff })(BattlenetSearchBar)
