@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import _ from 'lodash'
 
@@ -6,6 +6,7 @@ import { selectHero } from '../../actions/index'
 import HeroCardHeader from '../../components/hero_card_header/hero_card_header'
 import HeroCardScale from '../../components/hero_card_scale/hero_card_scale'
 import HeroCounterItem from '../../containers/hero_counter_item/hero_counter_item'
+import HeroCardBlank from '../../components/hero_card_blank/hero_card_blank'
 import styles from './hero_card.scss'
 
 class HeroCard extends Component {
@@ -18,11 +19,10 @@ class HeroCard extends Component {
   }
 
   render () {
-    const activeHero = this.props.activeHero
-    const heroes = this.props.heroes
+    const { heroes, activeHero } = this.props
 
     if (!activeHero) {
-      return <div className='hero-detail'>Loading...</div>
+      return <HeroCardBlank />
     }
 
     const strongAgainst = _.map(activeHero.strongAgainst, alias => {
@@ -60,6 +60,14 @@ class HeroCard extends Component {
       </div>
     )
   }
+}
+
+HeroCard.propTypes = {
+  selectHero: PropTypes.func,
+  heroes: PropTypes.array,
+  activeHero: PropTypes.object,
+  params: PropTypes.object,
+  alias: PropTypes.string
 }
 
 const mapStateToProps = state => {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import _ from 'lodash'
@@ -40,6 +40,12 @@ class HeroCounterItem extends Component {
       </Link>
     )
   }
+}
+
+HeroCounterItem.propTypes = {
+  side: PropTypes.string,
+  hero: PropTypes.object,
+  topHeroes: PropTypes.array
 }
 
 const mapStateToProps = state => {

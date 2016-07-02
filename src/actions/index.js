@@ -21,7 +21,8 @@ export function selectHero (alias) {
 }
 
 export function fetchBattlenet (tag) {
-  const url = `https://api.lootbox.eu/pc/eu/${tag.replace('#', '-')}/quick-play/heroes`
+  const convertedTag = tag.replace('#', '-')
+  const url = `https://api.lootbox.eu/pc/eu/${convertedTag}/quick-play/heroes`
   const request = axios.get(url)
   return {
     type: FETCH_BATTLENET,

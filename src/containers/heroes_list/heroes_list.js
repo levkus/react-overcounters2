@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { fetchHeroes } from 'actions/index'
 import _ from 'lodash'
@@ -48,6 +48,11 @@ class HeroesList extends Component {
       </div>
     )
   }
+}
+
+HeroesList.propTypes = {
+  fetchHeroes: PropTypes.func,
+  heroes: PropTypes.array
 }
 
 const mapStateToProps = state => {

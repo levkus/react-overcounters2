@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 import styles from './heroes_list_item.scss'
 
@@ -8,6 +8,10 @@ const HeroesListItem = ({ hero }) => {
       <img className={styles.image} src={hero.icon} alt={hero.name} />
     </Link>
   )
+}
+
+HeroesListItem.propTypes = {
+  hero: PropTypes.object
 }
 
 export default HeroesListItem

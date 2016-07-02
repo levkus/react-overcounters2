@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import styles from './hero_card_header.scss'
 import magic from './hero_card_magic.scss' // Some responsive sorcery
 
@@ -38,6 +38,11 @@ const HeroCardHeader = ({ image, name }) => {
       </div>
     </div>
   )
+}
+
+HeroCardHeader.propTypes = {
+  image: PropTypes.string,
+  name: PropTypes.string
 }
 
 export default HeroCardHeader

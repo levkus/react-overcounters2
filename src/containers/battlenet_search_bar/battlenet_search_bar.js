@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { fetchBattlenet } from '../../actions/index'
 import styles from './battlenet_search_bar.scss'
@@ -8,6 +8,9 @@ class BattlenetSearchBar extends Component {
     super(props)
 
     this.state = { term: '' }
+
+    this.onInputChange = this.onInputChange.bind(this)
+    this.onFormSubmit = this.onFormSubmit.bind(this)
   }
 
   componentWillMount () {
@@ -17,8 +20,8 @@ class BattlenetSearchBar extends Component {
     }
   }
 
-  onInputChange (term) {
-    this.setState({ term })
+  onInputChange (e) {
+    this.setState({ term: e.target.value })
   }
 
   onFormSubmit (e) {
@@ -29,15 +32,19 @@ class BattlenetSearchBar extends Component {
 
   render () {
     return (
-      <form onSubmit={e => this.onFormSubmit(e)}>
+      <form onSubmit={this.onFormSubmit}>
         <input type='text' placeholder='Battle Tag' spellCheck='false'
           className={styles.searchbar}
           value={this.state.term}
-          onChange={e => this.onInputChange(e.target.value)}
+          onChange={this.onInputChange}
         />
       </form>
     )
   }
+}
+
+BattlenetSearchBar.propTypes = {
+  fetchBattlenet: PropTypes.func
 }
 
 const mapStateToProps = state => {
