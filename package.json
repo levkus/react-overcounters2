@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-starter-kit",
-  "version": "3.0.0-alpha.0",
-  "description": "Get started with React, Redux, and React-Router!",
+  "name": "react-overcounters",
+  "version": "0.1.12",
+  "description": "A project that shows counter picks for all Overwatch heroes",
   "main": "index.js",
   "engines": {
     "node": ">=4.2.0",
