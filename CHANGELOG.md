@@ -1,6 +1,15 @@
 Changelog
 =========
 
+0.1.13.1
+-------------
+
+### Bug fixes
+1. Lucio missed 6 strong counters
+2. Lucio now has correct name spelling
+
+
+
 0.1.13
 -------------
 

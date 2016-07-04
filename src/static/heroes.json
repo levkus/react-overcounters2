@@ -211,10 +211,10 @@
   {
     "id": "19",
     "alias": "lucio",
-    "name": "Lucio",
+    "name": "Lúcio",
     "icon": "http://starpact.ru/overcounters/images/icon-lucio.png",
     "hex": "http://starpact.ru/overcounters/images/hex-lucio.png",
-    "strongAgainst": ["symmetra", "zenyatta", "torbjorn", "reinhardt", "zarya"],
+    "strongAgainst": ["symmetra", "zenyatta", "torbjorn", "reinhardt", "zarya", "hanzo"],
     "weakAgainst": ["mei", "mccree", "pharah", "soldier76", "roadhog", "tracer"],
     "role": "support",
     "selected": false
