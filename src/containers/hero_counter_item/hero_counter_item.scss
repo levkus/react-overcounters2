@@ -2,13 +2,14 @@
 
 .wrapper {
   display: inline-block;
-  margin-bottom: .5rem;
+  margin-bottom: 8px;
   width: 100%;
   color: $card-text;
   text-decoration: none;
   font-size: 1.375rem;
   font-family: 'bignoodletooobliqueitalic', Impact, sans-serif;
   cursor: pointer;
+  height: 50px;
 
   @media (max-width: 550px) {
     font-size: 1rem;
@@ -20,8 +21,21 @@
   &:hover > .avatar {
     border-color: $card-text-hover;
   }
+  &:hover > .goodAvatar {
+    border-color: $hero-top-border;
+  }
+  &:hover > .badAvatar {
+    border-color: darken($hero-bad-color, 5%);
+  }
   &:hover > .name {
     color: $card-text-hover;
+  }
+  &:hover > .goodName {
+    color: $hero-top-color;
+    text-shadow: 0 0 2px $hero-top-glow;
+  }
+  &:hover > .badName {
+    color: darken($hero-bad-color, 5%);
   }
 }
 
@@ -29,6 +43,17 @@
   position: relative;
   top: -1px;
   transition: color .1s;
+}
+
+.goodName {
+  composes: name;
+  color: $hero-top-color;
+  text-shadow: 0 0 1px transparentize($hero-top-glow, .5);
+}
+
+.badName {
+  composes: name;
+  color: $hero-bad-color;
 }
 
 .wrapperLeft {
@@ -62,9 +87,19 @@
   }
 }
 
-.topHero {
+.goodAvatar {
   composes: avatar;
-  background: $list-selected-border;
+  border-color: $hero-top-border;
+  box-shadow: inset 0 0 1px 1px $hero-top-glow;
+}
+
+.badAvatar {
+  composes: avatar;
+  border-color: $hero-bad-color;
+
+  & > .image {
+    opacity: .5;
+  }
 }
 
 .image {

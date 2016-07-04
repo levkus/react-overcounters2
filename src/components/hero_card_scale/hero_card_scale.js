@@ -10,8 +10,12 @@ export default class HeroDetailScale extends Component {
           <div className={styles.filled}></div>
           <div className={styles.filled}></div>
           <div className={styles.filled}></div>
+          <div className={styles.filled}></div>
+          <div className={styles.filled}></div>
         </div>
         <div className={styles.row}>
+          <div className={styles.filled}></div>
+          <div className={styles.filled}></div>
           <div className={styles.filled}></div>
           <div className={styles.filled}></div>
           <div className={styles.filled}></div>
@@ -20,11 +24,31 @@ export default class HeroDetailScale extends Component {
         <div className={styles.row}>
           <div className={styles.filled}></div>
           <div className={styles.filled}></div>
+          <div className={styles.filled}></div>
+          <div className={styles.filled}></div>
           <div className={styles.empty}></div>
           <div className={styles.empty}></div>
         </div>
         <div className={styles.row}>
           <div className={styles.filled}></div>
+          <div className={styles.filled}></div>
+          <div className={styles.filled}></div>
+          <div className={styles.empty}></div>
+          <div className={styles.empty}></div>
+          <div className={styles.empty}></div>
+        </div>
+        <div className={styles.row}>
+          <div className={styles.filled}></div>
+          <div className={styles.filled}></div>
+          <div className={styles.empty}></div>
+          <div className={styles.empty}></div>
+          <div className={styles.empty}></div>
+          <div className={styles.empty}></div>
+        </div>
+        <div className={styles.row}>
+          <div className={styles.filled}></div>
+          <div className={styles.empty}></div>
+          <div className={styles.empty}></div>
           <div className={styles.empty}></div>
           <div className={styles.empty}></div>
           <div className={styles.empty}></div>

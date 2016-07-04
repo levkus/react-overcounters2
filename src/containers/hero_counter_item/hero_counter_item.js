@@ -11,15 +11,21 @@ class HeroCounterItem extends Component {
     let right
     let wrapperClass = styles.wrapper
     let avatarClass = styles.avatar
-    const name = <span className={styles.name}>{hero.name}</span>
+    let nameClass = styles.name
 
     if (topHeroes) {
       _.map(topHeroes, topHero => {
-        if (topHero.name === hero.name) {
-          avatarClass = styles.topHero
+        if (topHero.name === hero.name && side === 'left') {
+          avatarClass = styles.goodAvatar
+          nameClass = styles.goodName
+        } else if (topHero.name === hero.name && side === 'right') {
+          avatarClass = styles.badAvatar
+          nameClass = styles.badName
         }
       })
     }
+
+    const name = <span className={nameClass}>{hero.name}</span>
 
     if (side === 'left') {
       left = name

@@ -1,6 +1,19 @@
 Changelog
 =========
 
+0.1.13
+-------------
+
+### Improvements
+1. Increased number of counters per hero from 4 to 6
+2. Remover Mercy from most weak counters
+3. Improver visibility of user's top heroes in counters list-color
+4. styled user's top heroes differently for strong and weak counters.
+
+### Bug fixes
+1. Fixed css for scale on both desktop and mobile
+
+
 0.1.12.1
 -------------
 
