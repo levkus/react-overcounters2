@@ -25,7 +25,7 @@
     border-color: $hero-top-border;
   }
   &:hover > .badAvatar {
-    border-color: darken($hero-bad-color, 5%);
+    // border-color: darken($hero-bad-color, 5%);
   }
   &:hover > .name {
     color: $card-text-hover;
@@ -35,7 +35,7 @@
     text-shadow: 0 0 2px $hero-top-glow;
   }
   &:hover > .badName {
-    color: darken($hero-bad-color, 5%);
+    // color: darken($hero-bad-color, 5%);
   }
 }
 
@@ -53,7 +53,7 @@
 
 .badName {
   composes: name;
-  color: $hero-bad-color;
+  // color: $hero-bad-color;
 }
 
 .wrapperLeft {
@@ -95,10 +95,10 @@
 
 .badAvatar {
   composes: avatar;
-  border-color: $hero-bad-color;
+  // border-color: $hero-bad-color;
 
   & > .image {
-    opacity: .5;
+    // opacity: .5;
   }
 }
 

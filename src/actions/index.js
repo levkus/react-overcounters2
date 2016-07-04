@@ -1,6 +1,6 @@
 // Action creator returns an Action (an object with type and payload)
 import axios from 'axios'
-import heroes from 'static/heroes.json'
+import heroes from 'static/heroes_en.json'
 
 export const FETCH_HEROES = 'FETCH_HEROES'
 export const SELECT_HERO = 'SELECT_HERO'
