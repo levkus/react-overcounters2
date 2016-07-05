@@ -43,7 +43,7 @@
 .battle {
   height: $header-height;
   line-height: $header-height;
-  width: 242px;
+  width: 15.125rem - $section-separator-width;
   align-self: flex-start;
   text-align: right;
 
@@ -55,6 +55,7 @@
   }
 
   @media (min-width: 551px) and (max-width: 1024px) {
+    width: auto;
     flex-grow: 1;
     margin-right: 1rem;
   }
