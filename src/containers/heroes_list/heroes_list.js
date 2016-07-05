@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { fetchHeroes } from 'actions/index'
+import { fetchHeroes, switchLanguage } from 'actions/index'
 import _ from 'lodash'
 
 import HeroesListItem from 'components/heroes_list_item/heroes_list_item'
@@ -15,36 +15,23 @@ import iconTower from './svg/tower.svg'
 class HeroesList extends Component {
   componentWillMount () {
     this.props.fetchHeroes()
+    this.props.switchLanguage('ru')
   }
 
-  renderList () {
-    const offense = _.map(_.filter(this.props.heroes, {role: 'offense'}), hero => {
+  getHeroesOfClass (role) {
+    const heroClass = _.filter(this.props.heroes, { role })
+    return _.map(heroClass, hero => {
       return <HeroesListItem hero={hero} key={hero.id} />
     })
-    const defense = _.map(_.filter(this.props.heroes, {role: 'defense'}), hero => {
-      return <HeroesListItem hero={hero} key={hero.id} />
-    })
-    const tank = _.map(_.filter(this.props.heroes, {role: 'tank'}), hero => {
-      return <HeroesListItem hero={hero} key={hero.id} />
-    })
-    const support = _.map(_.filter(this.props.heroes, {role: 'support'}), hero => {
-      return <HeroesListItem hero={hero} key={hero.id} />
-    })
-
-    return (
-      <div>
-        <HeroesListClass role='Offense' icon={iconBullets} heroes={offense} />
-        <HeroesListClass role='Defense' icon={iconTower} heroes={defense} />
-        <HeroesListClass role='Tank' icon={iconShield} heroes={tank} />
-        <HeroesListClass role='Support' icon={iconCross} heroes={support} />
-      </div>
-    )
   }
 
   render () {
     return (
       <div className={styles.heroesList}>
-        {this.renderList()}
+        <HeroesListClass role='Offense' icon={iconBullets} heroes={this.getHeroesOfClass('offense')} />
+        <HeroesListClass role='Defense' icon={iconTower} heroes={this.getHeroesOfClass('defense')} />
+        <HeroesListClass role='Tank' icon={iconShield} heroes={this.getHeroesOfClass('tank')} />
+        <HeroesListClass role='Support' icon={iconCross} heroes={this.getHeroesOfClass('support')} />
       </div>
     )
   }
@@ -52,6 +39,7 @@ class HeroesList extends Component {
 
 HeroesList.propTypes = {
   fetchHeroes: PropTypes.func,
+  switchLanguage: PropTypes.func,
   heroes: PropTypes.array
 }
 
@@ -62,4 +50,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { fetchHeroes })(HeroesList)
+export default connect(mapStateToProps, { fetchHeroes, switchLanguage })(HeroesList)
