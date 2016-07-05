@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2
+0.2.0
 -------------
 ### New features
 1. Added logo.
