@@ -27,7 +27,7 @@
   &:hover {
     border: none;
     background: $list-selected-bg;
-    box-shadow: 0 0 1px 2px $list-selected-border,
+    box-shadow: 0 0 0px 4px white,
                 inset 20px 20px 50px 0 $list-selected-border;
     transform: skew(24.88rad) scale(1.10);
   }
@@ -37,20 +37,22 @@
   z-index: 10;
   border: none;
   background: $list-selected-bg;
-  box-shadow: 0 0 0 2px $list-selected-border,
-              0 0 2px 2px $list-selected-glow,
-              inset 0 0 1px 1px $list-selected-inner-glow,
+  box-shadow: 0 0 3px 0 $list-selected-glow,
+              0 0 0 8px white,
+              0 0 5px 8px $list-selected-glow,
+              inset 0 0 3px 0px $list-selected-glow,
               inset 20px 20px 50px 0 $list-selected-border,
-              0 0 20px 0px $list-selected-outer-accent;
+              0 0 20px 8px $list-selected-outer-accent;
   transform: skew(24.88rad) scale(1.20);
   composes: avatar;
 
   &:hover {
-    box-shadow: 0 0 0 2px $list-selected-border,
-                0 0 2px 2px $list-selected-glow,
-                inset 0 0 1px 1px $list-selected-inner-glow,
-                inset 20px 20px 50px 0 $list-selected-border,
-                0 0 20px 0px $list-selected-outer-accent;
+    box-shadow: 0 0 3px 0 $list-selected-glow,
+                  0 0 0 8px white,
+                  0 0 5px 8px $list-selected-glow,
+                  inset 0 0 3px 0px $list-selected-glow,
+                  inset 20px 20px 50px 0 $list-selected-border,
+                  0 0 20px 8px $list-selected-outer-accent;
     transform: skew(24.88rad) scale(1.20);
   }
 }
