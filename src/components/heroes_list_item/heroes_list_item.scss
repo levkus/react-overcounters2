@@ -8,8 +8,8 @@
   width: 15%;
   border-radius: .5rem;
   cursor: pointer;
-  transform: skew(24.88rad);
-  -webkit-filter: blur(0px);
+  transform: skew(24.88rad) translateZ(0);
+  transition: .05s;
 
   &:before {
     position: relative;
@@ -62,6 +62,5 @@
   left: -10%;
   display: block;
   height: 115%;
-  transform: skew(-24.88rad) scale(1);
-  -webkit-filter: blur(0px);
+  transform: skew(-24.88rad) translateZ(0);
 }
