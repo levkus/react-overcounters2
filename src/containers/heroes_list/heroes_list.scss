@@ -2,11 +2,10 @@
 
 .heroesList {
   box-sizing: border-box;
+  margin-top: - $header-height;
   padding: 2rem;
   padding-top: $header-height + 2rem;
   min-height: 100vh;
-  margin-top: - $header-height;
-
   width: 550px;
   background: repeating-linear-gradient(45deg,
                 rgba(0, 0, 0, .85),
@@ -25,7 +24,7 @@
     min-height: 0;
     width: 100%;
   }
-  @media (min-width: 551px) and (max-width: 1019px) {
+  @media (min-width: 551px) and (max-width: 1024px) {
     margin-top: 0;
     padding: 2rem;
     min-height: 0;

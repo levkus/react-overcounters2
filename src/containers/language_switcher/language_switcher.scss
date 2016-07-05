@@ -1,0 +1,26 @@
+@import '../../style/vars';
+
+.selector {
+  text-transform: uppercase;
+  font-family: 'futura_no2_d_demi_boldregular';
+  cursor: pointer;
+}
+
+.on {
+  color: $list-selected-border;
+  composes: selector;
+}
+
+.off {
+  color: transparentize($card-text, .2);
+  composes: selector;
+
+  &:hover {
+    color: $card-text;
+  }
+}
+
+.separator {
+  margin: 0 .2rem;
+  color: transparentize($card-text, .5);
+}

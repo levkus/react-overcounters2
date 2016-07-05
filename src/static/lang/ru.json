@@ -1,0 +1,38 @@
+{
+  "language": "ru",
+  "names": [
+    { "alias": "genji", "name": "Гэндзи" },
+    { "alias": "reaper", "name": "Жнец" },
+    { "alias": "mccree", "name": "МакКри" },
+    { "alias": "soldier76", "name": "Солдат: 76" },
+    { "alias": "tracer", "name": "Трейсер" },
+    { "alias": "pharah", "name": "Фарра" },
+    { "alias": "bastion", "name": "Бастион" },
+    { "alias": "junkrat", "name": "Крысавчик" },
+    { "alias": "mei", "name": "Мэй" },
+    { "alias": "widowmaker", "name": "Роковая вдова" },
+    { "alias": "torbjorn", "name": "Торбьорн" },
+    { "alias": "hanzo", "name": "Хандзо" },
+    { "alias": "dva", "name": "D.Va" },
+    { "alias": "zarya", "name": "Заря" },
+    { "alias": "reinhardt", "name": "Райнхардт" },
+    { "alias": "roadhog", "name": "Турбосвин" },
+    { "alias": "winston", "name": "Уинстон" },
+    { "alias": "mercy", "name": "Ангел" },
+    { "alias": "zenyatta", "name": "Дзенъятта" },
+    { "alias": "lucio", "name": "Лусио" },
+    { "alias": "symmetra", "name": "Симметра" }
+  ],
+  "ui": {
+    "heroesList": {
+      "offense": "Штурм",
+      "defense": "Защита",
+      "tank": "Танк",
+      "support": "Поддержка"
+    },
+    "heroCard": {
+      "strongAgainst": "Слабые",
+      "weakAgainst": "Сильные"
+    }
+  }
+}

@@ -2,14 +2,14 @@ import React, { PropTypes } from 'react'
 import styles from './hero_card_header.scss'
 import magic from './hero_card_magic.scss' // Some responsive sorcery
 
-const HeroCardHeader = ({ image, name }) => {
+const HeroCardHeader = ({ image, name, strongText, weakText }) => {
   return (
     <div className={styles.wrapper}>
       <img className={styles.image} src={image} alt={name} />
       <div className={magic.magic}>
 
         <div className={magic.leftCol}>
-          <div className={magic.strong}>Strong against</div>
+          <div className={magic.strong}>{strongText}</div>
           <div className={magic.sideBottom}>
             <div className={magic.farLeft}></div>
             <div className={magic.bottomBlank}></div>
@@ -28,7 +28,7 @@ const HeroCardHeader = ({ image, name }) => {
         </div>
 
         <div className={magic.rightCol}>
-          <div className={magic.weak}>Weak against</div>
+          <div className={magic.weak}>{weakText}</div>
           <div className={magic.sideBottom}>
             <div className={magic.bottomBlank}></div>
             <div className={magic.farRight}></div>
@@ -42,7 +42,9 @@ const HeroCardHeader = ({ image, name }) => {
 
 HeroCardHeader.propTypes = {
   image: PropTypes.string,
-  name: PropTypes.string
+  name: PropTypes.string,
+  strongText: PropTypes.string,
+  weakText: PropTypes.string
 }
 
 export default HeroCardHeader

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { fetchHeroes, switchLanguage } from 'actions/index'
+import { fetchHeroes } from 'actions/index'
 import _ from 'lodash'
 
 import HeroesListItem from 'components/heroes_list_item/heroes_list_item'
@@ -15,10 +15,9 @@ import iconTower from './svg/tower.svg'
 class HeroesList extends Component {
   componentWillMount () {
     this.props.fetchHeroes()
-    this.props.switchLanguage('ru')
   }
 
-  getHeroesOfClass (role) {
+  getHeroes (role, lang) {
     const heroClass = _.filter(this.props.heroes, { role })
     return _.map(heroClass, hero => {
       return <HeroesListItem hero={hero} key={hero.id} />
@@ -26,12 +25,18 @@ class HeroesList extends Component {
   }
 
   render () {
+    // Multilanguage support
+    const { ui } = this.props
+    if (!ui.heroesList) {
+      return null
+    }
+
     return (
       <div className={styles.heroesList}>
-        <HeroesListClass role='Offense' icon={iconBullets} heroes={this.getHeroesOfClass('offense')} />
-        <HeroesListClass role='Defense' icon={iconTower} heroes={this.getHeroesOfClass('defense')} />
-        <HeroesListClass role='Tank' icon={iconShield} heroes={this.getHeroesOfClass('tank')} />
-        <HeroesListClass role='Support' icon={iconCross} heroes={this.getHeroesOfClass('support')} />
+        <HeroesListClass role={ui.heroesList.offense} icon={iconBullets} heroes={this.getHeroes('offense')} />
+        <HeroesListClass role={ui.heroesList.defense} icon={iconTower} heroes={this.getHeroes('defense')} />
+        <HeroesListClass role={ui.heroesList.tank} icon={iconShield} heroes={this.getHeroes('tank')} />
+        <HeroesListClass role={ui.heroesList.support} icon={iconCross} heroes={this.getHeroes('support')} />
       </div>
     )
   }
@@ -40,14 +45,16 @@ class HeroesList extends Component {
 HeroesList.propTypes = {
   fetchHeroes: PropTypes.func,
   switchLanguage: PropTypes.func,
-  heroes: PropTypes.array
+  heroes: PropTypes.array,
+  ui: PropTypes.object
 }
 
 const mapStateToProps = state => {
   return {
     heroes: state.heroes.all,
-    activeHero: state.heroes.activeHero
+    activeHero: state.heroes.activeHero,
+    ui: state.currentLanguage.ui
   }
 }
 
-export default connect(mapStateToProps, { fetchHeroes, switchLanguage })(HeroesList)
+export default connect(mapStateToProps, { fetchHeroes })(HeroesList)

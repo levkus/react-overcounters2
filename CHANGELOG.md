@@ -1,18 +1,22 @@
 Changelog
 =========
 
+0.2
+-------------
+### New features
+1. Added logo.
+2. Added language switching (current languages: English, Russian)
+
+
 0.1.13.1
 -------------
-
 ### Bug fixes
 1. Lucio missed 6 strong counters
 2. Lucio now has correct name spelling
 
 
-
 0.1.13
 -------------
-
 ### Improvements
 1. Increased number of counters per hero from 4 to 6
 2. Remover Mercy from most weak counters
@@ -25,14 +29,12 @@ Changelog
 
 0.1.12.1
 -------------
-
 ### Bug fixes
 1. Fixed padding on hero card on mobile devices
 
 
 0.1.12
 -------------
-
 ### Improvements
 1. Added fetching actions and reducer cases for future use
 2. Added loading state and animation for Battlenet search bar

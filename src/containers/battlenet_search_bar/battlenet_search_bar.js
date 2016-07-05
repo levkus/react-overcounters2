@@ -19,11 +19,11 @@ class BattlenetSearchBar extends Component {
 
   componentWillMount () {
     if (localStorage.tag) {
-      this.props.fetchingOn('fetching on mount')
+      this.props.fetchingOn()
       this.setState({ term: localStorage.tag, loading: true })
       this.props.fetchBattlenet(localStorage.tag)
         .then(() => {
-          this.props.fetchingOff('fetching off mount')
+          this.props.fetchingOff()
           this.setState({ loading: false })
         })
     }
@@ -35,11 +35,11 @@ class BattlenetSearchBar extends Component {
 
   onFormSubmit (e) {
     e.preventDefault()
-    this.props.fetchingOn('fetching on submit')
+    this.props.fetchingOn()
     this.setState({ loading: true })
     this.props.fetchBattlenet(this.state.term)
       .then(() => {
-        this.props.fetchingOff('fetching off submit')
+        this.props.fetchingOff()
         this.setState({ loading: false })
       })
     localStorage.setItem('tag', this.state.term)

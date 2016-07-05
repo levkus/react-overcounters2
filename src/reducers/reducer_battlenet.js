@@ -10,11 +10,9 @@ export default function (state = INITIAL_STATE, action) {
       return { ...state, topHeroes: topPickedHeroes }
 
     case FETCHING_ON:
-      console.log(action.text)
       return { ...state, fetching: true }
 
     case FETCHING_OFF:
-      console.log(action.text)
       return { ...state, fetching: false }
 
     default:

@@ -1,0 +1,38 @@
+{
+  "language": "en",
+  "names": [
+    { "alias": "genji", "name": "Genji" },
+    { "alias": "reaper", "name": "reaper" },
+    { "alias": "mccree", "name": "McCree" },
+    { "alias": "soldier76", "name": "Soldier: 76" },
+    { "alias": "tracer", "name": "Tracer" },
+    { "alias": "pharah", "name": "Pharah" },
+    { "alias": "bastion", "name": "Bastion" },
+    { "alias": "junkrat", "name": "Junkrat" },
+    { "alias": "mei", "name": "Mei" },
+    { "alias": "widowmaker", "name": "Widowmaker" },
+    { "alias": "torbjorn", "name": "Torbjörn" },
+    { "alias": "hanzo", "name": "Hanzo" },
+    { "alias": "dva", "name": "D.Va" },
+    { "alias": "zarya", "name": "Zarya" },
+    { "alias": "reinhardt", "name": "Reinhardt" },
+    { "alias": "roadhog", "name": "Roadhog" },
+    { "alias": "winston", "name": "Winston" },
+    { "alias": "mercy", "name": "Mercy" },
+    { "alias": "zenyatta", "name": "Zenyatta" },
+    { "alias": "lucio", "name": "Lúcio" },
+    { "alias": "symmetra", "name": "Symmetra" }
+  ],
+  "ui": {
+    "heroesList": {
+      "offense": "Offense",
+      "defense": "Defense",
+      "tank": "Tank",
+      "support": "Support"
+    },
+    "heroCard": {
+      "strongAgainst": "Strong against",
+      "weakAgainst": "Weak against"
+    }
+  }
+}

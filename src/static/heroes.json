@@ -112,7 +112,7 @@
   {
     "id": "10",
     "alias": "torbjorn",
-    "name": "Torbjörn",
+    "name": "Torbj&#xF6;rn",
     "icon": "http://starpact.ru/overcounters/images/icon-torbjorn.png",
     "hex": "http://starpact.ru/overcounters/images/hex-torbjorn.png",
     "strongAgainst": ["lucio", "symmetra", "zenyatta", "tracer", "mccree", "winston"],
@@ -211,7 +211,7 @@
   {
     "id": "19",
     "alias": "lucio",
-    "name": "Lúcio",
+    "name": "L&#xFA;cio",
     "icon": "http://starpact.ru/overcounters/images/icon-lucio.png",
     "hex": "http://starpact.ru/overcounters/images/hex-lucio.png",
     "strongAgainst": ["symmetra", "zenyatta", "torbjorn", "reinhardt", "zarya", "hanzo"],

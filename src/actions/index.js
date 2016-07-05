@@ -1,12 +1,15 @@
-// Action creator returns an Action (an object with type and payload)
 import axios from 'axios'
-import heroes from 'static/heroes_en.json'
+import _ from 'lodash'
+
+import heroes from 'static/heroes.json'
+import languages from '../static/lang/lang'
 
 export const FETCH_HEROES = 'FETCH_HEROES'
 export const SELECT_HERO = 'SELECT_HERO'
 export const FETCH_BATTLENET = 'FETCH_BATTLENET'
 export const FETCHING_ON = 'FETCHING_ON'
 export const FETCHING_OFF = 'FETCHING_OFF'
+export const SWITCH_LANGUAGE = 'SWITCH_LANGUAGE'
 
 export function fetchHeroes () {
   return {
@@ -38,4 +41,15 @@ export function fetchingOn (text) {
 
 export function fetchingOff (text) {
   return { type: FETCHING_OFF, text }
+}
+
+export function switchLanguage (lang) {
+  const newLang = _.find(languages, { language: lang })
+
+  console.log('action: ', newLang)
+
+  return {
+    type: SWITCH_LANGUAGE,
+    payload: newLang
+  }
 }

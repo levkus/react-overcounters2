@@ -6,7 +6,7 @@ import styles from './hero_counter_item.scss'
 
 class HeroCounterItem extends Component {
   render () {
-    const { side, hero, topHeroes } = this.props
+    const { side, hero, topHeroes, names } = this.props
     let left
     let right
     let wrapperClass = styles.wrapper
@@ -15,23 +15,25 @@ class HeroCounterItem extends Component {
 
     if (topHeroes) {
       _.map(topHeroes, topHero => {
-        if (topHero.name === hero.name && side === 'left') {
+        if (topHero.name === hero.name && side === 'weakAgainst') {
           avatarClass = styles.goodAvatar
           nameClass = styles.goodName
-        } else if (topHero.name === hero.name && side === 'right') {
+        } else if (topHero.name === hero.name && side === 'strongAgainst') {
           avatarClass = styles.badAvatar
           nameClass = styles.badName
         }
       })
     }
 
-    const name = <span className={nameClass}>{hero.name}</span>
+    const langHero = _.find(names, { alias: hero.alias })
 
-    if (side === 'left') {
+    const name = <span className={nameClass}>{langHero.name}</span>
+
+    if (side === 'weakAgainst') {
       left = name
       right = undefined
       wrapperClass = styles.wrapperLeft
-    } else if (side === 'right') {
+    } else if (side === 'strongAgainst') {
       left = undefined
       right = name
     }
@@ -40,7 +42,7 @@ class HeroCounterItem extends Component {
       <Link to={'/' + hero.alias} className={wrapperClass}>
         {left}
         <div className={avatarClass}>
-          <img className={styles.image} src={hero.icon} alt={hero.name} />
+          <img className={styles.image} src={hero.icon} alt={langHero.name} />
         </div>
         {right}
       </Link>
@@ -51,12 +53,14 @@ class HeroCounterItem extends Component {
 HeroCounterItem.propTypes = {
   side: PropTypes.string,
   hero: PropTypes.object,
-  topHeroes: PropTypes.array
+  topHeroes: PropTypes.array,
+  names: PropTypes.array
 }
 
 const mapStateToProps = state => {
   return {
-    topHeroes: state.battlenet.topHeroes
+    topHeroes: state.battlenet.topHeroes,
+    names: state.currentLanguage.names
   }
 }
 

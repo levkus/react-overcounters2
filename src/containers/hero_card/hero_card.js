@@ -18,43 +18,38 @@ class HeroCard extends Component {
     this.props.selectHero(this.props.params.alias)
   }
 
-  render () {
-    const { heroes, activeHero } = this.props
+  getCounters (side) {
+    return (
+      _.map(this.props.activeHero[side], alias => {
+        const counter = _.find(this.props.heroes, { alias })
+        return <HeroCounterItem side={side} hero={counter} key={counter.id} />
+      })
+    )
+  }
 
-    if (!activeHero) {
+  render () {
+    const { activeHero, lang } = this.props
+
+    if (!activeHero || lang.names === []) {
       return <HeroCardBlank />
     }
 
-    const strongAgainst = _.map(activeHero.strongAgainst, alias => {
-      const counter = _.find(heroes, { alias })
-      return (
-        <HeroCounterItem
-          side='right'
-          hero={counter}
-          key={counter.id}
-        />
-      )
-    })
-
-    const weakAgainst = _.map(activeHero.weakAgainst, alias => {
-      const counter = _.find(heroes, { alias })
-      return (
-        <HeroCounterItem
-          side='left'
-          hero={counter}
-          key={counter.id}
-        />
-      )
-    })
+    // Multilanguage support
+    const langHero = _.find(lang.names, { alias: activeHero.alias })
 
     return (
       <div className={styles.heroDetail}>
         <div className={styles.card}>
-          <HeroCardHeader image={activeHero.hex} name={activeHero.name} />
+          <HeroCardHeader
+            image={activeHero.hex}
+            name={langHero.name}
+            strongText={lang.ui.heroCard.strongAgainst}
+            weakText={lang.ui.heroCard.weakAgainst}
+          />
           <div className={styles.info}>
-            <div className={styles.strong}>{strongAgainst}</div>
+            <div className={styles.strong}>{this.getCounters('strongAgainst')}</div>
             <HeroCardScale />
-            <div className={styles.weak}>{weakAgainst}</div>
+            <div className={styles.weak}>{this.getCounters('weakAgainst')}</div>
           </div>
         </div>
       </div>
@@ -67,13 +62,15 @@ HeroCard.propTypes = {
   heroes: PropTypes.array,
   activeHero: PropTypes.object,
   params: PropTypes.object,
-  alias: PropTypes.string
+  alias: PropTypes.string,
+  lang: PropTypes.object
 }
 
 const mapStateToProps = state => {
   return {
     heroes: state.heroes.all,
-    activeHero: state.heroes.activeHero
+    activeHero: state.heroes.activeHero,
+    lang: state.currentLanguage
   }
 }
 
