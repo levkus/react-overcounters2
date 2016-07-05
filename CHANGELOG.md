@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.0.1
+0.2.1
 -------------
 ### Improvements
 1. Replaced Futura font with light variation
