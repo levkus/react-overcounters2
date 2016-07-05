@@ -9,7 +9,6 @@
   border-radius: .5rem;
   cursor: pointer;
   transform: skew(24.88rad) translateZ(0);
-  transition: .05s;
 
   &:before {
     position: relative;
@@ -62,5 +61,5 @@
   left: -10%;
   display: block;
   height: 115%;
-  transform: skew(-24.88rad) translateZ(0);
+  transform: skew(-24.88rad) translateZ(0) scale(1);
 }
