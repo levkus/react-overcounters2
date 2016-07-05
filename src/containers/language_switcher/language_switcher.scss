@@ -2,7 +2,7 @@
 
 .selector {
   text-transform: uppercase;
-  font-family: 'futura_no2_d_demi_boldregular';
+  font-family: 'futuralightcregular';
   cursor: pointer;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .off {
-  color: transparentize($card-text, .2);
+  color: $card-text;
   composes: selector;
 
   &:hover {

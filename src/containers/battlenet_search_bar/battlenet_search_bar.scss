@@ -4,13 +4,14 @@
   height: $header-height/2;
   line-height: $header-height/2;
   border: none;
-  background: #212121;
-  border: 1px solid #272727;
+  background: #23252f;
+  border: 1px solid transparentize($card-border-color, .2);
   border-radius: 3px;
   color: $card-text;
   padding: 0 .5rem;
   width: 150px;
   text-align: center;
+  font-family: 'futuralightcregular', sans-serif;
 
   &:focus {
     outline: 0;
@@ -20,6 +21,7 @@
 
 .fetching {
   composes: searchbar;
+  color: transparentize($card-text, .5);
   background-image: repeating-linear-gradient(-45deg,
               $loader-bg 0px,
               $loader-bg 10px,

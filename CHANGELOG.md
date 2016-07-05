@@ -1,6 +1,14 @@
 Changelog
 =========
 
+0.2.0.1
+-------------
+### Improvements
+1. Replaced Futura font with light variation
+2. Fixed some colors
+3. Added space
+
+
 0.2.0
 -------------
 ### New features
