@@ -14,7 +14,7 @@ export const Header = (props) => {
       </div>
       <div className={styles.language}>
         <LanguageSwitcher />
-      </div>  
+      </div>
     </div>
   )
 }

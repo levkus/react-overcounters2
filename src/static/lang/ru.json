@@ -33,6 +33,7 @@
     "heroCard": {
       "strongAgainst": "Слабые",
       "weakAgainst": "Сильные"
-    }
+    },
+    "welcomeMessage": "Выбери героя чтобы начать."
   }
 }
