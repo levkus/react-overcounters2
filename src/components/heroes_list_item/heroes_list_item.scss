@@ -9,6 +9,7 @@
   border-radius: .5rem;
   cursor: pointer;
   transform: skew(24.88rad);
+  -webkit-filter: blur(0px);
 
   &:before {
     position: relative;
@@ -58,8 +59,9 @@
 .image {
   position: absolute;
   top: 0;
-  left: -10%;
+  left: -12%;
   display: block;
-  height: 115%;
+  height: 100%;
   transform: skew(-24.88rad) scale(1);
+  -webkit-filter: blur(0px);
 }
