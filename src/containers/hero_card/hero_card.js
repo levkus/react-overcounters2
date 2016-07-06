@@ -41,7 +41,7 @@ class HeroCard extends Component {
       <div className={styles.heroDetail}>
         <div className={styles.card}>
           <HeroCardHeader
-            image={activeHero.hex}
+            alias={activeHero.alias}
             name={langHero.name}
             strongText={lang.ui.heroCard.strongAgainst}
             weakText={lang.ui.heroCard.weakAgainst}

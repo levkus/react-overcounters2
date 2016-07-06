@@ -2,10 +2,10 @@ import React, { PropTypes } from 'react'
 import styles from './hero_card_header.scss'
 import magic from './hero_card_magic.scss' // Some responsive sorcery
 
-const HeroCardHeader = ({ image, name, strongText, weakText }) => {
+const HeroCardHeader = ({ alias, name, strongText, weakText }) => {
   return (
     <div className={styles.wrapper}>
-      <img className={styles.image} src={image} alt={name} />
+      <img className={styles.image} src={`./img/heroes/hex-${alias}.png`} alt={name} />
       <div className={magic.magic}>
 
         <div className={magic.leftCol}>
@@ -41,7 +41,7 @@ const HeroCardHeader = ({ image, name, strongText, weakText }) => {
 }
 
 HeroCardHeader.propTypes = {
-  image: PropTypes.string,
+  alias: PropTypes.string,
   name: PropTypes.string,
   strongText: PropTypes.string,
   weakText: PropTypes.string

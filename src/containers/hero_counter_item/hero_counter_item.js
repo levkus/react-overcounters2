@@ -42,7 +42,7 @@ class HeroCounterItem extends Component {
       <Link to={'/' + hero.alias} className={wrapperClass}>
         {left}
         <div className={avatarClass}>
-          <img className={styles.image} src={hero.icon} alt={langHero.name} />
+          <img className={styles.image} src={`./img/heroes/icon-${hero.alias}.png`} alt={langHero.name} />
         </div>
         {right}
       </Link>
