@@ -1,6 +1,16 @@
 Changelog
 =========
 
+0.2.3
+-------------
+
+### Improvements
+1. Added footer
+2. Switched to Futura Book
+3. Increased padding in heroes list-color
+4. Made language switcher more visible
+
+
 0.2.2
 -------------
 

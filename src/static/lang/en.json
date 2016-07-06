@@ -34,6 +34,12 @@
       "strongAgainst": "Strong against",
       "weakAgainst": "Weak against"
     },
-    "welcomeMessage": "Select a hero to start."
+    "welcomeMessage": "Select a hero to start.",
+    "footer": {
+      "development": "Development",
+      "design": "Design",
+      "disclaimer": "Disclaimer",
+      "disclaimerText": "Information is based on various public sources and our own experience and is provided as is. If you disagree with some counters or would like to add or change something, feel free to contacs us."
+    }
   }
 }

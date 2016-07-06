@@ -1,0 +1,48 @@
+@import '../../style/vars';
+
+.footer {
+  display: flex;
+  flex-flow: row;
+  box-sizing: border-box;
+  padding: 1rem;
+  background: #1b1e2b;
+  color: $card-text;
+  font-family: 'futurabookcregular', sans-serif;
+  width: 100%;
+
+  h3 {
+    margin: 0;
+    font-family: 'bignoodletooregular', Impact, sans-serif;
+  }
+
+  @media (max-width: 550px) {
+    padding: .7rem .5rem;
+    flex-flow: column;
+  }
+}
+
+.contacts {
+  width: 536px;
+
+  a {
+    color: $list-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $language-switcher-selected;
+    }
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  @media (max-width: 550px) {
+    width: 100%;
+  }
+}
+
+.disclaimer {
+  flex-grow: 1;
+}
