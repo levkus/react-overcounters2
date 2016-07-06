@@ -1,5 +1,21 @@
 @import '../../style/vars';
 
+$list-normal-bg: transparent;
+$list-selected-bg: #FF9E00;
+$list-selected-border: #ffe600;
+$list-selected-grad-overlay: #ffc200;
+$list-selected-glow: rgba(255, 253, 68, 1);
+$list-selected-outer-accent: rgba(255, 131, 0, .6);
+
+@mixin frameSelected {
+  box-shadow: 0 0 3px 1px $list-selected-glow,
+              0 0 0 8px white,
+              0 0 1px 9px $list-selected-glow,
+              inset 0 0 5px 1px $list-selected-glow,
+              inset 20px 20px 50px 0 $list-selected-grad-overlay,
+              0 0 20px 9px $list-selected-outer-accent;
+}
+
 .avatar {
   position: relative;
   overflow: hidden;
@@ -26,32 +42,23 @@
 
   &:hover {
     border: none;
-    // background: $list-selected-bg;
-    box-shadow: 0 0 0px 4px white;
+    box-shadow: 0 0 0 4px white;
     transform: skew(24.88rad) scale(1.10);
   }
 }
 
 .selected {
+  @include frameSelected;
+
   z-index: 10;
   border: none;
   background: $list-selected-bg;
-  box-shadow: 0 0 3px 1px $list-selected-glow,
-              0 0 0 8px white,
-              0 0 1px 9px $list-selected-glow,
-              inset 0 0 5px 1px $list-selected-glow,
-              inset 20px 20px 50px 0 $list-selected-grad-overlay,
-              0 0 20px 9px $list-selected-outer-accent;
   transform: skew(24.88rad) scale(1.20);
   composes: avatar;
 
   &:hover {
-    box-shadow: 0 0 3px 1px $list-selected-glow,
-                0 0 0 8px white,
-                0 0 1px 9px $list-selected-glow,
-                inset 0 0 5px 1px $list-selected-glow,
-                inset 20px 20px 50px 0 $list-selected-grad-overlay,
-                0 0 20px 9px $list-selected-outer-accent;
+    @include frameSelected;
+
     transform: skew(24.88rad) scale(1.20);
   }
 }

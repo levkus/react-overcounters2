@@ -7,13 +7,6 @@ $loader-bg: #212944;
 /* Heroes list */
 
 $list-color: rgba(221, 221, 232, .8);
-$list-normal-bg: transparent;
-$list-selected-bg: #FF9E00;
-$list-selected-border: #ffe600;
-$list-selected-grad-overlay: #ffc200;
-$list-selected-glow: rgba(255, 253, 68, 1);
-$list-selected-outer-accent: rgba(255, 131, 0, .6);
-$list-selected-inner-glow: rgba(255, 234, 57, .35);
 $section-separator-width: .175rem;
 
 /* Hero Card */
@@ -30,3 +23,6 @@ $hero-top-glow: rgba(255, 223, 46, 1);
 $hero-top-border: #ffc200;
 
 $hero-bad-color: #dec4c4;
+
+/* Language switcher */
+$language-switcher-selected: #ffe600;

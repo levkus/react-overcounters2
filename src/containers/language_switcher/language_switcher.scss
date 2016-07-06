@@ -4,10 +4,11 @@
   text-transform: uppercase;
   font-family: 'futuralightcregular';
   cursor: pointer;
+  text-shadow: 0 0 1px transparentize($card-header-text, .8);
 }
 
 .on {
-  color: $list-selected-border;
+  color: $language-switcher-selected;
   composes: selector;
 }
 
