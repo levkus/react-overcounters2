@@ -26,9 +26,8 @@
 
   &:hover {
     border: none;
-    background: $list-selected-bg;
-    box-shadow: 0 0 0px 4px white,
-                inset 20px 20px 50px 0 $list-selected-border;
+    // background: $list-selected-bg;
+    box-shadow: 0 0 0px 4px white;
     transform: skew(24.88rad) scale(1.10);
   }
 }
@@ -62,6 +61,6 @@
   top: 0;
   left: -10%;
   display: block;
-  height: 115%;
+  height: 118%;
   transform: skew(-24.88rad) translateZ(0) scale(1);
 }

@@ -46,8 +46,6 @@ export function fetchingOff (text) {
 export function switchLanguage (lang) {
   const newLang = _.find(languages, { language: lang })
 
-  console.log('action: ', newLang)
-
   return {
     type: SWITCH_LANGUAGE,
     payload: newLang

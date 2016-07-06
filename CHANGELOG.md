@@ -1,6 +1,14 @@
 Changelog
 =========
 
+0.2.1.1
+-------------
+
+### Improvements
+1. Changed selected hero frame to look more like ingame
+2. Removed base64 fonts from vars.scss and eplaced with links. No more 2mb css files =)
+
+
 0.2.1
 -------------
 ### Improvements

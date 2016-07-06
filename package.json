@@ -1,6 +1,6 @@
 {
   "name": "react-overcounters",
-  "version": "0.2.1",
+  "version": "0.2.1.1",
   "description": "A project that shows counter picks for all Overwatch heroes",
   "main": "index.js",
   "engines": {
