@@ -4,7 +4,7 @@
   text-transform: uppercase;
   font-family: 'futuralightcregular';
   cursor: pointer;
-  text-shadow: 0 0 1px transparentize($card-header-text, .8);
+  text-shadow: 0 0 1px rgba(12, 47, 89, 0.08);
 }
 
 .on {
