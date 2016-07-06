@@ -36,7 +36,7 @@
   z-index: 10;
   border: none;
   background: $list-selected-bg;
-  box-shadow: 0 0 3px 0 $list-selected-glow,
+  box-shadow: 0 0 3px 0 darken($list-selected-glow, 15%),
               0 0 0 8px white,
               0 0 5px 8px $list-selected-glow,
               inset 0 0 3px 0px $list-selected-glow,

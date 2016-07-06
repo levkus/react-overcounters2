@@ -29,28 +29,3 @@ $hero-top-glow: rgba(255, 223, 46, 1);
 $hero-top-border: #ffc200;
 
 $hero-bad-color: #dec4c4;
-/* Fonts */
-
-@font-face {
-    font-family: 'bignoodletooregular';
-    src: url('static/fonts/bignoodletoo-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'bignoodletooobliqueitalic';
-    src: url('static/fonts/bignoodletoooblique-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-
-}
-
-@font-face {
-    font-family: 'futuralightcregular';
-    src: url('static/fonts/futuralightc-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
