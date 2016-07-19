@@ -1,6 +1,4 @@
 import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux'
-import { fetchBattlenet, fetchingOn, fetchingOff } from '../../actions/index'
 import styles from './battlenet_search_bar.scss'
 
 class BattlenetSearchBar extends Component {
@@ -19,11 +17,11 @@ class BattlenetSearchBar extends Component {
 
   componentWillMount () {
     if (localStorage.tag) {
-      this.props.fetchingOn()
+      this.props.fetchingToggle(true)
       this.setState({ term: localStorage.tag, loading: true })
       this.props.fetchBattlenet(localStorage.tag)
         .then(() => {
-          this.props.fetchingOff()
+          this.props.fetchingToggle(false)
           this.setState({ loading: false })
         })
     }
@@ -35,11 +33,11 @@ class BattlenetSearchBar extends Component {
 
   onFormSubmit (e) {
     e.preventDefault()
-    this.props.fetchingOn()
+    this.props.fetchingToggle(true)
     this.setState({ loading: true })
     this.props.fetchBattlenet(this.state.term)
       .then(() => {
-        this.props.fetchingOff()
+        this.props.fetchingToggle(false)
         this.setState({ loading: false })
       })
     localStorage.setItem('tag', this.state.term)
@@ -72,16 +70,8 @@ class BattlenetSearchBar extends Component {
 
 BattlenetSearchBar.propTypes = {
   fetchBattlenet: PropTypes.func,
-  fetchingOn: PropTypes.func,
-  fetchingOff: PropTypes.func,
-  fetching: PropTypes.bool
+  fetching: PropTypes.bool,
+  fetchingToggle: PropTypes.func
 }
 
-const mapStateToProps = state => {
-  return {
-    topHeroes: state.battlenet.topHeroes,
-    fetching: state.battlenet.fetching
-  }
-}
-
-export default connect(mapStateToProps, { fetchBattlenet, fetchingOn, fetchingOff })(BattlenetSearchBar)
+export default BattlenetSearchBar

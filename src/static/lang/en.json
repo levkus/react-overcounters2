@@ -21,7 +21,8 @@
     { "alias": "mercy", "name": "Mercy" },
     { "alias": "zenyatta", "name": "Zenyatta" },
     { "alias": "lucio", "name": "Lúcio" },
-    { "alias": "symmetra", "name": "Symmetra" }
+    { "alias": "symmetra", "name": "Symmetra" },
+    { "alias": "ana", "name": "Ana" }
   ],
   "ui": {
     "heroesList": {
@@ -31,10 +32,39 @@
       "support": "Support"
     },
     "heroCard": {
-      "strongAgainst": "Strong against",
-      "weakAgainst": "Weak against"
+      "weakCounters": "Weak counters",
+      "strongCounters": "Strong counters"
     },
+    "battlenetForm": {
+      "battleTag": "Battle tag:",
+      "platform": "Platform:",
+      "region": "Region:",
+      "gameMode": "Game mode:",
+      "values": {
+        "platform": {
+          "pc": "PC",
+          "xbox": "XBOX",
+          "ps": "PlayStation"
+        },
+        "region": {
+          "eu": "Europe",
+          "na": "North America",
+          "kr": "Korea",
+          "cn": "China"
+        },
+        "mode": {
+          "quick": "Quick play",
+          "competitive": "Competitive play"
+        }
+      }
+    },
+    "newHeroText": "This hero has just arrived and we don't have the data yet. Check back soon ;)",
     "welcomeMessage": "Select a hero to start.",
+    "settings": {
+      "settingsHeader": "Settings",
+      "battlenet": "Battle.net",
+      "language": "Language"
+    },
     "footer": {
       "development": "Development",
       "design": "Design",

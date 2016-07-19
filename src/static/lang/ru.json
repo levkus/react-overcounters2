@@ -21,7 +21,8 @@
     { "alias": "mercy", "name": "Ангел" },
     { "alias": "zenyatta", "name": "Дзенъятта" },
     { "alias": "lucio", "name": "Лусио" },
-    { "alias": "symmetra", "name": "Симметра" }
+    { "alias": "symmetra", "name": "Симметра" },
+    { "alias": "ana", "name": "Ана" }
   ],
   "ui": {
     "heroesList": {
@@ -31,10 +32,39 @@
       "support": "Поддержка"
     },
     "heroCard": {
-      "strongAgainst": "Слабые",
-      "weakAgainst": "Сильные"
+      "weakCounters": "Слабые",
+      "strongCounters": "Сильные"
     },
+    "battlenetForm": {
+      "battleTag": "Battle tag:",
+      "platform": "Платформа:",
+      "region": "Регион:",
+      "gameMode": "Режим игры:",
+      "values": {
+        "platform": {
+          "pc": "ПК",
+          "xbox": "XBOX",
+          "ps": "PlayStation"
+        },
+        "region": {
+          "eu": "Европа",
+          "na": "Северная Америка",
+          "kr": "Корея",
+          "cn": "Китай"
+        },
+        "mode": {
+          "quick": "Быстрая игра",
+          "competitive": "Соревновательная игра"
+        }
+      }
+    },
+    "newHeroText": "Этот герой только прибыл и у нас пока нет данных по нему. Загляните попозже ;)",
     "welcomeMessage": "Выбери героя чтобы начать.",
+    "settings": {
+      "settingsHeader": "Настройки",
+      "battlenet": "Battle.net",
+      "language": "Язык"
+    },
     "footer": {
       "development": "Разработка",
       "design": "Дизайн",

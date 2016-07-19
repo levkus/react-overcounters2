@@ -1,7 +1,4 @@
 import React, { Component, PropTypes} from 'react'
-import { connect } from 'react-redux'
-import { switchLanguage } from 'actions/index'
-
 import styles from './language_switcher.scss'
 
 class LanguageSwitcher extends Component {
@@ -13,13 +10,13 @@ class LanguageSwitcher extends Component {
     }
   }
 
-  renderSelector (lang) {
+  renderSelector (lang, string) {
     let style = styles.off
     if (this.props.currentLanguage === lang) {
       style = styles.on
     }
     return (
-      <span className={style} onClick={() => this.onLanguageChange(lang)}>{lang}</span>
+      <span className={style} onClick={() => this.onLanguageChange(lang)}>{string}</span>
     )
   }
 
@@ -31,17 +28,11 @@ class LanguageSwitcher extends Component {
   render () {
     return (
       <div>
-        {this.renderSelector('en')}
+        {this.renderSelector('en', 'English')}
         <span className={styles.separator}>|</span>
-        {this.renderSelector('ru')}
+        {this.renderSelector('ru', 'Русский')}
       </div>
     )
-  }
-}
-
-const mapStateToProps = state => {
-  return {
-    currentLanguage: state.currentLanguage.lang
   }
 }
 
@@ -50,4 +41,4 @@ LanguageSwitcher.propTypes = {
   switchLanguage: PropTypes.func
 }
 
-export default connect(mapStateToProps, { switchLanguage })(LanguageSwitcher)
+export default LanguageSwitcher

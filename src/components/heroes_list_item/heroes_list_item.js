@@ -4,8 +4,8 @@ import styles from './heroes_list_item.scss'
 
 const HeroesListItem = ({ hero }) => {
   return (
-    <Link to={'/' + hero.alias} className={styles.normal} activeClassName={styles.selected}>
-      <img className={styles.image} src={`./img/heroes/icon-${hero.alias}.png`} alt={hero.alias} />
+    <Link to={'/heroes/' + hero.alias} className={styles.normal} activeClassName={styles.selected}>
+      <img className={styles.image} src={`/img/heroes/icon-${hero.alias}.png`} alt={hero.alias} />
     </Link>
   )
 }

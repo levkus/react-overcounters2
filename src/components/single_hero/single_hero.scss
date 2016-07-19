@@ -1,0 +1,8 @@
+.overwatch {
+  display: flex;
+  flex-flow: row;
+
+  @media (max-width: 1024px) {
+    flex-flow: column;
+  }
+}

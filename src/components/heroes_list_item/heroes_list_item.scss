@@ -50,7 +50,7 @@ $list-selected-outer-accent: rgba(255, 131, 0, .6);
 .selected {
   @include frameSelected;
 
-  z-index: 10;
+  z-index: 2;
   border: none;
   background: $list-selected-bg;
   transform: skew(24.88rad) scale(1.20);

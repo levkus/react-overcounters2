@@ -1,16 +1,14 @@
 import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux'
-import { fetchHeroes } from 'actions/index'
 import _ from 'lodash'
 
 import HeroesListItem from 'components/heroes_list_item/heroes_list_item'
 import HeroesListClass from 'components/heroes_list_class/heroes_list_class'
 import styles from './heroes_list.scss'
 
-import iconBullets from './svg/bullets.svg'
-import iconCross from './svg/cross.svg'
-import iconShield from './svg/shield.svg'
-import iconTower from './svg/tower.svg'
+import iconBullets from 'static/icons/bullets.svg'
+import iconCross from 'static/icons/cross.svg'
+import iconShield from 'static/icons/shield.svg'
+import iconTower from 'static/icons/tower.svg'
 
 class HeroesList extends Component {
   componentWillMount () {
@@ -49,12 +47,4 @@ HeroesList.propTypes = {
   ui: PropTypes.object
 }
 
-const mapStateToProps = state => {
-  return {
-    heroes: state.heroes.all,
-    activeHero: state.heroes.activeHero,
-    ui: state.currentLanguage.ui
-  }
-}
-
-export default connect(mapStateToProps, { fetchHeroes })(HeroesList)
+export default HeroesList

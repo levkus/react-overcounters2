@@ -3,14 +3,13 @@
 .searchbar {
   height: $header-height/2;
   line-height: $header-height/2;
-  border: none;
   background: #23252f;
   border: 1px solid transparentize($card-border-color, .2);
   border-radius: 3px;
   color: $card-text;
   padding: 0 .5rem;
   width: 150px;
-  text-align: center;
+  // text-align: center;
   font-family: 'futurabookcregular', sans-serif;
 
   &:focus {

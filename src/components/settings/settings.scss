@@ -1,0 +1,89 @@
+@import '../../style/vars';
+
+$settings-width: 400px;
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  display: block;
+  padding: 2rem;
+  width: $settings-width;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(27, 30, 43, .95), rgba(27, 30, 43, 1));
+  color: $card-text;
+  transition: .2s ease;
+
+  @media (max-width: 550px) {
+    width: 100%;
+  }
+}
+
+.hidden {
+  transform: translateX(0 - $settings-width);
+  composes: wrapper;
+
+  @media (max-width: 550px) {
+    transform: translateX(0 - 100%);
+  }
+}
+
+.visible {
+  transform: translateX(0);
+  composes: wrapper;
+}
+
+.close {
+  width: 1.4rem;
+  height: 1.4rem;
+  cursor: pointer;
+
+  &:before, &:after {
+    position: relative;
+    left: .7rem;
+    display: block;
+    width: 3px;
+    height: 1.4rem;
+    background: $card-text;
+    content: '';
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    top: -1.4rem;
+    transform: rotate(-45deg);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: -1rem -1rem 0 -1rem;
+
+  h2 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-family: 'bignoodletooobliqueitalic', Impact, sans-serif;
+  }
+}
+
+.sectionHeader {
+  border-bottom: 1px solid rgba(95, 121, 189, .1);
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.25rem;
+  font-family: 'futurabookcregular', sans-serif;
+  cursor: default;
+}
+
+@keyframes come-in {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}

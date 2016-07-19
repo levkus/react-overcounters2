@@ -1,0 +1,64 @@
+:global {
+  @import '~normalize.css/normalize';
+  @import 'vars';
+
+  html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  .icon {
+    position: relative;
+    top: 7px;
+    margin-right: 6px;
+    width: 22px;
+    height: 24px;
+    fill: rgba(221, 221, 232, .6);
+
+    &--settings {
+      position: relative;
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: $card-text;
+      cursor: pointer;
+
+      &:hover {
+        fill: lighten($card-text, 20%);
+      }
+    }
+  }
+
+  body {
+    background-image: url('../static/img/bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: 'futurabookcregular', sans-serif;
+  }
+}
+
+@font-face {
+    font-family: 'bignoodletooregular';
+    src: url('style/fonts/bignoodletoo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bignoodletooobliqueitalic';
+    src: url('style/fonts/bignoodletoooblique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'futurabookcregular';
+    src: url('style/fonts/futurabookc-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

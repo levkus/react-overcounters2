@@ -1,0 +1,47 @@
+@import '../../style/vars';
+
+.input {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0 .5rem;
+  width: 200px;
+  height: $header-height/2;
+  border: 1px solid transparentize($card-border-color, .2);
+  border-radius: 3px;
+  background: #23252f;
+  color: $card-text;
+  // text-align: center;
+  font-family: 'futurabookcregular', sans-serif;
+  line-height: $header-height/2;
+
+  &:focus {
+    outline: 0;
+    background: $loader-bg;
+  }
+}
+
+.label {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.submit {
+  width: auto;
+  background: #212944;
+  color: $card-text;
+  cursor: pointer;
+  composes: input;
+
+  &:hover {
+    background: $language-switcher-selected;
+    color: $card-header-text;
+  }
+}
+
+.battleTag {
+  composes: input;
+}
+
+.select {
+  composes: input
+}

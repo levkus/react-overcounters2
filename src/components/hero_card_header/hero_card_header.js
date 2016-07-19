@@ -5,7 +5,7 @@ import magic from './hero_card_magic.scss' // Some responsive sorcery
 const HeroCardHeader = ({ alias, name, strongText, weakText }) => {
   return (
     <div className={styles.wrapper}>
-      <img className={styles.image} src={`./img/heroes/hex-${alias}.png`} alt={name} />
+      <img className={styles.image} src={`/img/heroes/hex-${alias}.png`} alt={name} />
       <div className={magic.magic}>
 
         <div className={magic.leftCol}>
