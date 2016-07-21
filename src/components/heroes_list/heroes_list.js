@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import _ from 'lodash'
 
-import HeroesListItem from 'components/heroes_list_item/heroes_list_item'
-import HeroesListClass from 'components/heroes_list_class/heroes_list_class'
+import HeroesListItem from './heroes_list_item/heroes_list_item'
+import HeroesListClass from './heroes_list_class/heroes_list_class'
 import styles from './heroes_list.scss'
 
 import iconBullets from 'static/icons/bullets.svg'

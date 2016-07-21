@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import HeroCounterItem from 'components/hero_counter_item/hero_counter_item'
+import HeroCounterItem from 'components/hero_card/hero_counter_item/hero_counter_item'
 
 const mapStateToProps = state => {
   return {

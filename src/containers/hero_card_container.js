@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { selectHero } from '../actions/index'
-import HeroCard from '../components/hero_card/hero_card'
+import HeroCard from 'components/hero_card/hero_card'
 
 const mapStateToProps = state => {
   return {

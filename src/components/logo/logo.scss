@@ -1,0 +1,27 @@
+@import '../../style/vars';
+
+.container {
+  height: 26px;
+  text-decoration: none;
+
+  &:after {
+    content: '.info';
+    text-transform: uppercase;
+    color: $main-accent;
+    font-style: normal;
+    position: relative;
+    top: -5px;
+    font-size: .8rem;
+  }
+}
+
+:global {
+  .overlogo {
+    fill: $card-text;
+    height: 26px;
+
+    .overlogo__triangle {
+      fill: $main-accent;
+    }
+  }
+}

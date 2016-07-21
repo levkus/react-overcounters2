@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from 'react'
 import _ from 'lodash'
 import styles from './hero_card.scss'
 
-import HeroCardHeader from 'components/hero_card_header/hero_card_header'
-import HeroCardScale from 'components/hero_card_scale/hero_card_scale'
+import HeroCardHeader from './hero_card_header/hero_card_header'
+import HeroCardScale from './hero_card_scale/hero_card_scale'
 import HeroCounterItem from 'containers/hero_counter_item_container'
 import HeroCardBlank from 'components/hero_card_blank/hero_card_blank'
 

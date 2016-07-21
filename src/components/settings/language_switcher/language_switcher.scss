@@ -1,4 +1,4 @@
-@import '../../style/vars';
+@import '../../../style/vars';
 
 .selector {
   text-transform: uppercase;
@@ -8,7 +8,7 @@
 }
 
 .on {
-  color: $language-switcher-selected;
+  color: $main-accent;
   composes: selector;
 }
 

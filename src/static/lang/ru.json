@@ -32,8 +32,8 @@
       "support": "Поддержка"
     },
     "heroCard": {
-      "weakCounters": "Слабые",
-      "strongCounters": "Сильные"
+      "weakCounters": "Слабые противники",
+      "strongCounters": "Сильные противники"
     },
     "battlenetForm": {
       "battleTag": "Battle tag:",

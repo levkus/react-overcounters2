@@ -1,4 +1,4 @@
-@import '../../style/vars';
+@import '../../../style/vars';
 
 .magic {
   position: relative;
@@ -14,7 +14,7 @@
 
 .name {
   position: relative;
-  top: -14px;
+  top: -10px;
   white-space: nowrap;
   font-size: 2.1rem;
 
@@ -86,17 +86,14 @@
 .counter {
   position: relative;
   top: 6px;
+  top: -16px;
+  word-spacing: 1000px; // hack for multilanguage word wrapping
   font-size: 20px;
   font-family: 'bignoodletooregular', Impact, sans-serif;
 
   @media (max-width: 370px) {
     font-size: 18px;
   }
-
-  @media (max-width: 350px) {
-    top: -16px;
-  }
-
 }
 
 .strong {

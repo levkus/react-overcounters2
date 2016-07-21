@@ -1,0 +1,78 @@
+@import '../../../style/vars';
+
+.input {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0 .5rem;
+  width: 200px;
+  height: $header-height/2;
+  border: 1px solid transparentize($card-border-color, .2);
+  border-radius: 3px;
+  background: #23252f;
+  color: $card-text;
+  // text-align: center;
+  font-family: 'futurabookcregular', sans-serif;
+  line-height: $header-height/2;
+
+  &:focus {
+    outline: 0;
+    background: $loader-bg;
+  }
+}
+
+.label {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.submit {
+  width: auto;
+  background: #212944;
+  color: $card-text;
+  cursor: pointer;
+  composes: input;
+
+  &:hover {
+    background: $main-accent;
+    color: $card-header-text;
+  }
+}
+
+.battleTag {
+  composes: input;
+}
+
+.select {
+  composes: input
+}
+
+.fetching {
+  composes: submit;
+  color: transparentize($card-text, .5);
+  background-image: repeating-linear-gradient(-45deg,
+              $loader-bg 0px,
+              $loader-bg 10px,
+              lighten($loader-bg, 5%) 10px,
+              lighten($loader-bg, 5%) 20px);
+  background-size: 28px $header-height/2;
+  animation: loading 10s infinite linear forwards;
+
+  &:focus, &:hover {
+    background-image: repeating-linear-gradient(-45deg,
+                $loader-bg 0px,
+                $loader-bg 10px,
+                lighten($loader-bg, 5%) 10px,
+                lighten($loader-bg, 5%) 20px);
+    background-size: 28px $header-height/2;
+    animation: loading 10s infinite linear forwards;
+  }
+}
+
+@keyframes loading {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}

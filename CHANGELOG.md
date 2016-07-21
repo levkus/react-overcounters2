@@ -1,6 +1,16 @@
 Changelog
 =========
 
+0.2.5
+-------------
+
+#Improvements
+1. Logo is now SVG
+2. Added settings menu
+3. Added selectors for platform, region and game mode
+4. CSS Cleanup
+5. Added Ana
+
 0.2.3
 -------------
 

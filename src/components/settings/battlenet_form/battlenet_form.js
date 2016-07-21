@@ -2,35 +2,67 @@ import React, { Component, PropTypes} from 'react'
 import styles from './battlenet_form.scss'
 
 class BattlenetForm extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
 
-    this.onFormElementChange = this.onFormElementChange.bind(this)
+    this.onBattleTagChange = this.onBattleTagChange.bind(this)
+    this.onPlatformChange = this.onPlatformChange.bind(this)
+    this.onRegionChange = this.onRegionChange.bind(this)
+    this.onGameModeChange = this.onGameModeChange.bind(this)
     this.onFormSubmit = this.onFormSubmit.bind(this)
   }
 
-  onFormElementChange (event) {
-    this.props.setBattlenet({ [event.target.id]: event.target.value })
+  componentWillMount () {
+    if (localStorage.query) {
+      const query = JSON.parse(localStorage.getItem('query'))
+      const { battleTag, platform, region, mode } = query
+      const { setTag, setPlatform, setRegion, setGameMode } = this.props
+      setTag(battleTag)
+      setPlatform(platform)
+      setRegion(region)
+      setGameMode(mode)
+      this.props.fetchingToggle(true)
+      this.props.fetchBattlenet(battleTag, platform, region, mode)
+        .then(() => {
+          this.props.fetchingToggle(false)
+        })
+    }
+  }
+
+  onBattleTagChange (event) {
+    this.props.setTag(event.target.value)
+  }
+  onPlatformChange (event) {
+    console.log(event.target.value)
+    this.props.setPlatform(event.target.value)
+  }
+  onRegionChange (event) {
+    this.props.setRegion(event.target.value)
+  }
+  onGameModeChange (event) {
+    this.props.setGameMode(event.target.value)
   }
 
   onFormSubmit (event) {
     event.preventDefault()
-    event.target.blur()
     const { battleTag, platform, region, mode } = this.props
     this.props.fetchingToggle(true)
     this.props.fetchBattlenet(battleTag, platform, region, mode)
       .then(this.props.fetchingToggle(false))
+    const query = { battleTag, platform, region, mode }
+    localStorage.setItem('query', JSON.stringify(query))
   }
 
   render () {
     const lang = this.props.lang
+    let buttonStyle = this.props.fetching ? styles.fetching : styles.submit
     return (
       <form onSubmit={this.onFormSubmit}>
         <label className={styles.label} htmlFor='battleTag'>{lang.battleTag}</label>
         <input id='battleTag' type='text' placeholder='Battle Tag'
           className={styles.battleTag}
           value={this.props.battleTag}
-          onChange={this.onFormElementChange}
+          onChange={this.onBattleTagChange}
           autoComplete='off'
           spellCheck='false'
         />
@@ -38,7 +70,7 @@ class BattlenetForm extends Component {
         <select id='platform'
           className={styles.select}
           value={this.props.platform}
-          onChange={this.onFormElementChange}
+          onChange={this.onPlatformChange}
         >
           <option value='pc'>{lang.values.platform.pc}</option>
           <option value='xbl'>{lang.values.platform.xbox}</option>
@@ -48,7 +80,7 @@ class BattlenetForm extends Component {
         <select id='region'
           className={styles.select}
           value={this.props.region}
-          onChange={this.onFormElementChange}
+          onChange={this.onRegionChange}
         >
           <option value='eu'>{lang.values.region.eu}</option>
           <option value='na'>{lang.values.region.na}</option>
@@ -59,21 +91,25 @@ class BattlenetForm extends Component {
         <select id='mode'
           className={styles.select}
           value={this.props.mode}
-          onChange={this.onFormElementChange}
+          onChange={this.onGameModeChange}
         >
           <option value='quick-play'>{lang.values.mode.quick}</option>
           <option value='competitive-play'>{lang.values.mode.competitive}</option>
         </select>
-        <button className={styles.submit} type='submit'>Submit</button>
+        <button className={buttonStyle} type='submit'>Save</button>
       </form>
     )
   }
 }
 
 BattlenetForm.propTypes = {
-  setBattlenet: PropTypes.func,
+  setTag: PropTypes.func,
+  setPlatform: PropTypes.func,
+  setRegion: PropTypes.func,
+  setGameMode: PropTypes.func,
   fetchBattlenet: PropTypes.func,
   fetchingToggle: PropTypes.func,
+  fetching: PropTypes.bool,
   battleTag: PropTypes.string,
   platform: PropTypes.string,
   region: PropTypes.string,

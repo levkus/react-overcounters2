@@ -2,7 +2,7 @@
 
 .heroesList {
   box-sizing: border-box;
-  padding: $header-height + 2rem $section-separator-width + 3rem 3rem 3rem;
+  padding: $header-height $section-separator-width + 3rem 3rem 3rem;
   min-height: 100vh;
   width: 550px;
   background: repeating-linear-gradient(45deg,
@@ -18,13 +18,13 @@
   color: rgba(221, 221, 232, .8);
 
   @media (max-width: 550px) {
-    padding: $header-height + 2rem 1rem 1rem 1rem;
+    padding: $header-height 1rem 1rem 1rem;
     min-height: 0;
     width: 100%;
     box-shadow: none;
   }
   @media (min-width: 551px) and (max-width: 1024px) {
-    padding: $header-height + 2rem 2rem 2rem 2rem;
+    padding: $header-height 2rem 2rem 2rem;
     min-height: 0;
     width: 100%;
     box-shadow: none;

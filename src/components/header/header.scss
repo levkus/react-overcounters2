@@ -13,11 +13,6 @@
   height: $header-height;
   color: $card-text;
 
-  i {
-    height: 1.5rem;
-    width: 1.5rem;
-  }
-
   @media (max-width: 550px) {
     flex-flow: row wrap;
     height: auto;
@@ -29,16 +24,13 @@
   }
 }
 
-.logo {
-  width: 276px;
-  height: $header-height;
-  background-image: url('static/img/overcounters-logo.png');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+.settingsIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: $card-text;
+  cursor: pointer;
 
-  @media (max-width: 550px) {
-    background-position: right;
-    height: $header-height/2;
+  &:hover {
+    fill: lighten($card-text, 20%);
   }
 }

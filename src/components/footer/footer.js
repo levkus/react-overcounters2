@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux'
 import styles from './footer.scss'
 
 class Footer extends Component {
@@ -26,10 +25,4 @@ Footer.propTypes = {
   text: PropTypes.object
 }
 
-const mapStateToProps = state => {
-  return {
-    text: state.currentLanguage.ui.footer
-  }
-}
-
-export default connect(mapStateToProps)(Footer)
+export default Footer

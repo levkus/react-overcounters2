@@ -1,4 +1,4 @@
-import { FETCH_BATTLENET, SET_BATTLENET, FETCHING } from '../actions/index'
+import { SET_TAG, SET_PLATFORM, SET_REGION, SET_GAME_MODE, FETCH_BATTLENET, FETCHING } from '../actions/index'
 import _ from 'lodash'
 
 const INITIAL_STATE = {
@@ -12,9 +12,17 @@ const INITIAL_STATE = {
 
 export default function (state = INITIAL_STATE, action) {
   switch (action.type) {
-    case SET_BATTLENET:
-      const key = Object.keys(action.payload)
-      return { ...state, [key]: action.payload[key] }
+    case SET_TAG:
+      return { ...state, battleTag: action.battleTag }
+
+    case SET_PLATFORM:
+      return { ...state, platform: action.platform }
+
+    case SET_REGION:
+      return { ...state, region: action.region }
+
+    case SET_GAME_MODE:
+      return { ...state, mode: action.mode }
 
     case FETCH_BATTLENET:
       const topPickedHeroes = _.slice(action.payload.data, 0, 4)

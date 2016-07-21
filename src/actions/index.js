@@ -12,8 +12,6 @@ export const SET_PLATFORM = 'SET_PLATFORM'
 export const SET_REGION = 'SET_REGION'
 export const SET_GAME_MODE = 'SET_GAME_MODE'
 
-export const SET_BATTLENET = 'SET_BATTLENET'
-
 export const FETCH_BATTLENET = 'FETCH_BATTLENET'
 export const FETCHING = 'FETCHING'
 export const SWITCH_LANGUAGE = 'SWITCH_LANGUAGE'
@@ -24,18 +22,13 @@ export const fetchHeroes = () => ({ type: FETCH_HEROES, payload: heroes })
 
 export const selectHero = alias => ({ type: SELECT_HERO, payload: alias })
 
-export const setBattlenet = object => ({
-  type: SET_BATTLENET,
-  payload: object
-})
-
-export const setTag = tag => ({ type: SET_TAG, tag })
+export const setTag = battleTag => ({ type: SET_TAG, battleTag })
 export const setPlatform = platform => ({ type: SET_PLATFORM, platform })
 export const setRegion = region => ({ type: SET_REGION, region })
 export const setGameMode = mode => ({ type: SET_GAME_MODE, mode })
 
-export const fetchBattlenet = (tag, platform = 'pc', region = 'eu', mode = 'quick-play') => {
-  const convertedTag = tag.replace('#', '-')
+export const fetchBattlenet = (battleTag, platform = 'pc', region = 'eu', mode = 'quick-play') => {
+  const convertedTag = battleTag.replace('#', '-')
   const url = `https://api.lootbox.eu/${platform}/${region}/${convertedTag}/${mode}/heroes`
   const request = axios.get(url)
   return {

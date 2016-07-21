@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import styles from './settings.scss'
+import onClickOutside from 'react-onclickoutside'
 import InlineSVG from 'svg-inline-react'
 
-// import BattlenetSearchBar from 'containers/battlenet_search_bar_container'
 import BattlenetForm from 'containers/battlenet_form_container'
 import LanguageSwitcher from 'containers/language_switcher_container'
 
@@ -14,6 +14,11 @@ class Settings extends Component {
 
     this.onCloseButtonClick = this.onCloseButtonClick.bind(this)
   }
+
+  handleClickOutside (e) {
+    this.props.toggleSettings(false)
+  }
+
   onCloseButtonClick () {
     this.props.toggleSettings(false)
   }
@@ -42,4 +47,4 @@ Settings.propTypes = {
   lang: PropTypes.object
 }
 
-export default Settings
+export default onClickOutside(Settings)
