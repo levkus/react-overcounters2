@@ -18,11 +18,11 @@
     { "alias": "reinhardt", "name": "Reinhardt" },
     { "alias": "roadhog", "name": "Roadhog" },
     { "alias": "winston", "name": "Winston" },
+    { "alias": "ana", "name": "Ana" },
     { "alias": "mercy", "name": "Mercy" },
     { "alias": "zenyatta", "name": "Zenyatta" },
     { "alias": "lucio", "name": "Lúcio" },
-    { "alias": "symmetra", "name": "Symmetra" },
-    { "alias": "ana", "name": "Ana" }
+    { "alias": "symmetra", "name": "Symmetra" }
   ],
   "ui": {
     "heroesList": {

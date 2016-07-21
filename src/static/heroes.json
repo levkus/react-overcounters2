@@ -154,6 +154,15 @@
   },
   {
     "id": "17",
+    "alias": "ana",
+    "name": "Ana",
+    "weakCounters": [],
+    "strongCounters": [],
+    "role": "support",
+    "selected": false
+  },
+  {
+    "id": "18",
     "alias": "mercy",
     "name": "Mercy",
     "weakCounters": ["symmetra", "lucio", "torbjorn", "junkrat", "zenyatta", "zarya"],
@@ -162,7 +171,7 @@
     "selected": false
   },
   {
-    "id": "18",
+    "id": "19",
     "alias": "zenyatta",
     "name": "Zenyatta",
     "weakCounters": ["symmetra", "lucio", "dva", "reinhardt", "winston", "junkrat"],
@@ -171,7 +180,7 @@
     "selected": false
   },
   {
-    "id": "19",
+    "id": "20",
     "alias": "lucio",
     "name": "L&#xFA;cio",
     "weakCounters": ["symmetra", "zenyatta", "torbjorn", "reinhardt", "zarya", "hanzo"],
@@ -180,20 +189,11 @@
     "selected": false
   },
   {
-    "id": "20",
+    "id": "21",
     "alias": "symmetra",
     "name": "Symmetra",
     "weakCounters": ["genji", "lucio", "reinhardt", "tracer", "zenyatta", "dva"],
     "strongCounters": ["pharah", "roadhog", "mccree", "junkrat", "widowmaker", "winston"],
-    "role": "support",
-    "selected": false
-  },
-  {
-    "id": "21",
-    "alias": "ana",
-    "name": "Ana",
-    "weakCounters": [],
-    "strongCounters": [],
     "role": "support",
     "selected": false
   }
