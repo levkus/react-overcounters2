@@ -4,21 +4,29 @@
   height: 26px;
   text-decoration: none;
 
+  @media (max-width: 330px) {
+    height: 20px;
+  }
+
   &:after {
-    content: '.info';
-    text-transform: uppercase;
-    color: $main-accent;
-    font-style: normal;
     position: relative;
     top: -5px;
+    color: $main-accent;
+    content: '.info';
+    text-transform: uppercase;
+    font-style: normal;
     font-size: .8rem;
   }
 }
 
 :global {
   .overlogo {
-    fill: $card-text;
     height: 26px;
+    fill: $card-text;
+
+    @media (max-width: 330px) {
+      height: 20px;
+    }
 
     .overlogo__triangle {
       fill: $main-accent;

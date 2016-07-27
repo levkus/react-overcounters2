@@ -1,0 +1,18 @@
+@import '../../../style/vars';
+
+.wrapper {
+  text-align: center;
+  width: 200px;
+}
+
+.avatar {
+  width: 150px;
+}
+
+.name {
+  display: block;
+  font-family: 'bignoodletooobliqueitalic', Impact, sans-serif;
+  color: $card-header-text;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}

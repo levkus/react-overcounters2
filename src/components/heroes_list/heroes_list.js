@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import _ from 'lodash'
 
+import Header from 'containers/header_container'
 import HeroesListItem from './heroes_list_item/heroes_list_item'
 import HeroesListClass from './heroes_list_class/heroes_list_class'
 import styles from './heroes_list.scss'
@@ -31,6 +32,7 @@ class HeroesList extends Component {
 
     return (
       <div className={styles.heroesList}>
+        <Header />
         <HeroesListClass role={ui.heroesList.offense} icon={iconBullets} heroes={this.getHeroes('offense')} />
         <HeroesListClass role={ui.heroesList.defense} icon={iconTower} heroes={this.getHeroes('defense')} />
         <HeroesListClass role={ui.heroesList.tank} icon={iconShield} heroes={this.getHeroes('tank')} />

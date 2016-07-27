@@ -15,9 +15,12 @@
     font-family: 'bignoodletooregular', Impact, sans-serif;
   }
 
+  @media (max-width: 1024px) {
+    flex-flow: column;
+  }
+
   @media (max-width: 550px) {
     padding: .7rem .5rem;
-    flex-flow: column;
   }
 }
 

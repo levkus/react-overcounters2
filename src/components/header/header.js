@@ -18,8 +18,9 @@ class Header extends Component {
   }
 
   render () {
+    let style = this.props.fullwidth ? styles.wrapperFullWidth : styles.wrapper
     return (
-      <div className={styles.wrapper}>
+      <div className={style}>
         <InlineSVG src={iconGear} raw className={styles.settingsIcon} onClick={this.onSettingsClick} />
         <Logo logo={logo} />
       </div>
@@ -30,7 +31,8 @@ class Header extends Component {
 Header.propTypes = {
   ui: PropTypes.object,
   toggleSettings: PropTypes.func,
-  showSettings: PropTypes.bool
+  showSettings: PropTypes.bool,
+  fullwidth: PropTypes.bool
 }
 
 export default Header
