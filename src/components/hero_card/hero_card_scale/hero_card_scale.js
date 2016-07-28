@@ -9,31 +9,11 @@ const HeroCardScale = () => {
         <div className={styles.filled}></div>
         <div className={styles.filled}></div>
         <div className={styles.filled}></div>
-        <div className={styles.filled}></div>
-        <div className={styles.filled}></div>
       </div>
       <div className={styles.row}>
         <div className={styles.filled}></div>
         <div className={styles.filled}></div>
         <div className={styles.filled}></div>
-        <div className={styles.filled}></div>
-        <div className={styles.filled}></div>
-        <div className={styles.empty}></div>
-      </div>
-      <div className={styles.row}>
-        <div className={styles.filled}></div>
-        <div className={styles.filled}></div>
-        <div className={styles.filled}></div>
-        <div className={styles.filled}></div>
-        <div className={styles.empty}></div>
-        <div className={styles.empty}></div>
-      </div>
-      <div className={styles.row}>
-        <div className={styles.filled}></div>
-        <div className={styles.filled}></div>
-        <div className={styles.filled}></div>
-        <div className={styles.empty}></div>
-        <div className={styles.empty}></div>
         <div className={styles.empty}></div>
       </div>
       <div className={styles.row}>
@@ -41,13 +21,9 @@ const HeroCardScale = () => {
         <div className={styles.filled}></div>
         <div className={styles.empty}></div>
         <div className={styles.empty}></div>
-        <div className={styles.empty}></div>
-        <div className={styles.empty}></div>
       </div>
       <div className={styles.row}>
         <div className={styles.filled}></div>
-        <div className={styles.empty}></div>
-        <div className={styles.empty}></div>
         <div className={styles.empty}></div>
         <div className={styles.empty}></div>
         <div className={styles.empty}></div>

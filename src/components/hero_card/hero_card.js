@@ -28,7 +28,7 @@ class HeroCard extends Component {
   }
 
   renderCounters () {
-    if (this.props.activeHero.weakCounters.length === 0) {
+    if (this.props.activeHero.strongCounters.length === 0) {
       return (
         <div className={styles.info}>
           <div className={styles.newHero}>{this.props.lang.ui.newHeroText}</div>
