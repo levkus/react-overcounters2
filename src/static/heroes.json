@@ -156,8 +156,8 @@
     "id": "17",
     "alias": "ana",
     "name": "Ana",
-    "weakCounters": [],
-    "strongCounters": [],
+    "weakCounters": ["zenyatta", "mercy", "lucio", "roadhog", "reaper", "pharah"],
+    "strongCounters": ["widowmaker", "winston", "genji", "soldier76", "reinhardt", "hanzo"],
     "role": "support",
     "selected": false
   },

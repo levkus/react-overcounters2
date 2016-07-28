@@ -1,0 +1,73 @@
+@import '../../../style/vars';
+
+$list-normal-bg: transparent;
+$list-selected-bg: #FF9E00;
+$list-selected-border: #ffe600;
+$list-selected-grad-overlay: #ffc200;
+$list-selected-glow: rgba(255, 253, 68, 1);
+$list-selected-outer-accent: rgba(255, 131, 0, .6);
+
+@mixin frameSelected {
+  box-shadow: 0 0 3px 1px $list-selected-glow,
+              0 0 0 8px white,
+              0 0 1px 9px $list-selected-glow,
+              inset 0 0 5px 1px $list-selected-glow,
+              inset 20px 20px 50px 0 $list-selected-grad-overlay,
+              0 0 20px 9px $list-selected-outer-accent;
+}
+
+.avatar {
+  position: relative;
+  overflow: hidden;
+  margin-right: .5%;
+  margin-bottom: 2rem;
+  width: 5%;
+  border-radius: .5rem;
+  cursor: pointer;
+  transform: skew(24.88rad) translateZ(0);
+
+  &:before {
+    position: relative;
+    display: block;
+    padding-top: 110%;
+    content: '';
+  }
+}
+
+.normal {
+  border-top: 3px solid $list-color;
+  border-bottom: 3px solid $list-color;
+  background-color: $list-normal-bg;
+  composes: avatar;
+
+  &:hover {
+    border: none;
+    box-shadow: 0 0 0 4px white;
+    transform: skew(24.88rad) scale(1.10);
+  }
+}
+
+.selected {
+  @include frameSelected;
+
+  z-index: 2;
+  border: none;
+  background: $list-selected-bg;
+  transform: skew(24.88rad) scale(1.20);
+  composes: avatar;
+
+  &:hover {
+    @include frameSelected;
+
+    transform: skew(24.88rad) scale(1.20);
+  }
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: -10%;
+  display: block;
+  height: 118%;
+  transform: skew(-24.88rad) translateZ(0) scale(1);
+}
